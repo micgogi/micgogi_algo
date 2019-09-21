@@ -1,3 +1,6 @@
-/.idea/
-out
+.idea
+*.iws
+*.iml
+*.ipr
+out/
 algo.iml

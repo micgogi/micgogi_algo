@@ -2,5 +2,5 @@
 *.iws
 *.iml
 *.ipr
-out
-algo.iml
+/out/
+

@@ -36,7 +36,7 @@ public class My2{
     public static void mergeSort(int a[] , int p , int r) {
     	int q=0;
     	if(p<r) {
-    		q=(int) Math.floor((p+r)/2);
+    		q=(p+r)/2;
     		System.out.println(q);
         	mergeSort(a,p,q);
     		mergeSort(a,q+1,r);

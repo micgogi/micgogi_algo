@@ -37,7 +37,7 @@ public class My2{
     	int q=0;
     	if(p<r) {
     		q=(p+r)/2;
-    		System.out.println(q);
+    	
         	mergeSort(a,p,q);
     		mergeSort(a,q+1,r);
     		merge(a,p,q,r);

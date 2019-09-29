@@ -64,6 +64,15 @@ public class My4 {
 			return (hasPathSum(subSum,node.left)||hasPathSum(subSum,node.right));
 		}
 	}
+	public void mirror(Node root) {
+		if(root!=null) {
+			mirror(root.left);
+			mirror(root.right);
+			Node temp = root.left; 
+			root.left = root.right;
+			root.right = temp;
+		}
+	}
 	public static void main(String args[]) {
 		head = new Node(16);
 		head.left = new Node(14);
@@ -75,7 +84,7 @@ public class My4 {
 		head.left.left.left = new Node(2);
 		head.left.left.right = new Node(4);
 		head.left.right.left = new Node(1);
-		postorder(head);
+		
 	}
 
 }

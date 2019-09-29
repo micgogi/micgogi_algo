@@ -36,6 +36,13 @@ public class My4 {
 			inorder(temp.right);
 		}
 	}
+	public static void preorder(Node temp) {
+		if(temp!=null) {
+			System.out.println(temp.data);
+			preorder(temp.left);
+			preorder(temp.right);
+		}
+	}
 	public static void main(String args[]) {
 		head = new Node(16);
 		head.left = new Node(14);
@@ -48,7 +55,7 @@ public class My4 {
 		head.left.left.right = new Node(4);
 		head.left.right.left = new Node(1);
 		//System.out.println(length(head));		
-		inorder(head);
+		preorder(head);
 	}
 
 }

@@ -51,6 +51,19 @@ public class My4 {
 			
 		}
 	}
+	
+	public static boolean hasPathSum(int sum) {
+		return hasPathSum( sum,  head);
+	}
+	
+	public static boolean hasPathSum(int sum , Node node) {
+		if(node==null) {
+			return (sum==0);
+		}else {
+			int subSum = sum-node.data;
+			return (hasPathSum(subSum,node.left)||hasPathSum(subSum,node.right));
+		}
+	}
 	public static void main(String args[]) {
 		head = new Node(16);
 		head.left = new Node(14);
@@ -62,7 +75,6 @@ public class My4 {
 		head.left.left.left = new Node(2);
 		head.left.left.right = new Node(4);
 		head.left.right.left = new Node(1);
-		//System.out.println(length(head));		
 		postorder(head);
 	}
 

@@ -85,6 +85,6 @@ public class My4 {
 		head.left.left.right = new Node(4);
 		head.left.right.left = new Node(1);
 		
-	}
+	} 
 
 }

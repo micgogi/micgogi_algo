@@ -3,6 +3,7 @@ import java.util.Stack;
 public class QueueUsingStack {
    static  Stack<Integer> s1 = new Stack<>();
    static Stack<Integer> s2 = new Stack<>();
+
     public static void main(String args[]){
         enqueue(1);
         enqueue(2);

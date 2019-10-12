@@ -1,6 +1,6 @@
-public class SegemnetTree {
+public class SegmentTree {
     int st[];
-    SegemnetTree(int arr[] , int n){
+    SegmentTree(int arr[] , int n){
 
         int x =(int) Math.ceil(Math.log(n)/Math.log(2));
         int max_size = 2*(int)Math.pow(2,x)-1;
@@ -42,7 +42,7 @@ public class SegemnetTree {
     public static void main(String[] args) {
         int arr[] = {1,3,5,7,9,11};
         int n = arr.length;
-        SegemnetTree sg = new SegemnetTree(arr,n);
+        SegmentTree sg = new SegmentTree(arr,n);
         System.out.println(sg.getSum(n,1,3));
     }
 }

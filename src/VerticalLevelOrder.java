@@ -28,8 +28,9 @@ public class VerticalLevelOrder {
            al.add(temp.data);
            tm.put(level,al);
        }
+        vertical(temp.right,level+1);
        vertical(temp.left,level-1);
-       vertical(temp.right,level+1);
+
 
 
     }

@@ -5,7 +5,7 @@ import java.util.Arrays;
  * on 12/7/2019  10:03 PM
  * Micgogi
  */
-public class LC15 {
+public class LC46 {
     public static void main(String[] args) {
         int a[] = {1,2,3};
         permut(a, a.length);

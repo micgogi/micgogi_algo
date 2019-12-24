@@ -9,25 +9,7 @@ import java.util.Map;
  * 65 78 75 73 84 65
  */
 public class Test {
-    public static void main(String[] args) {
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String s = br.readLine();
-            String demo = "";
-            Map<Character, Integer> map = new HashMap<>();
-            int si=0,ci=0,max=0;
+    public void main(String[] args) {
 
-            for (; ci <s.length() ; ci++) {
-                if(map.containsKey(s.charAt(ci))){
-                    si=Math.max(si,map.get(s.charAt(ci))+1);
-
-                }
-                map.put(s.charAt(ci),ci);
-                max = Math.max(max,ci-si+1);
-            }
-            System.out.println(max);
-        } catch (Exception e) {
-
-        }
     }
 }

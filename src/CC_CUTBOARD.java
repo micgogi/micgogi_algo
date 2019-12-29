@@ -18,7 +18,7 @@ public class CC_CUTBOARD {
                 int m = Integer.parseInt(s1[1]);
                 System.out.println((n-1)*(m-1));
             }
-        }catch (Exception e){
+        }catch (Exception j){
 
         }
     }

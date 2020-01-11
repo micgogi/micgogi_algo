@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author Micgogi
  * on 1/9/2020  11:52 PM
- * Micgogi
+ * Micgogi hi
  */
 public class CC_HORSES {
     public static void main(String[] args) {

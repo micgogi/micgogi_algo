@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * @author Micgogi
  * on 1/15/2020  3:08 PM
@@ -17,6 +20,11 @@ public class Temp {
         }
     }
     public static void main(String[] args) {
+        try {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
+
         root = new Node(5);
         root.left = new Node(2);
         root.right = new  Node(3);
@@ -26,11 +34,13 @@ public class Temp {
         root.right.right.left = new Node(4);
         root.right.right.right = new Node(6);
 
-        int l = level(root,9,6,0);
-        System.out.println(l);
+        int l = level(root,a,b,0);
+        //System.out.println(l);
         int tn = (int)Math.pow(2,l);
         System.out.println(tn-2);
+        }catch (Exception e){
 
+        }
 
     }
     public static int level(Node temp, int a,int b, int level ){

@@ -41,11 +41,14 @@ public class KRUSKAL {
             union(a,b);
             edgecount++;
             mincost+=min;
-            System.out.println(mincost);
+
 
         }
+        System.out.println(mincost);
     }
     public static void main(String[] args) {
+        long currentTime = System.currentTimeMillis();
+        System.out.println(currentTime);
         int graph[][] = {
                 {INF,2,INF,6,INF},
                 {2,INF,3,8,5},
@@ -54,5 +57,9 @@ public class KRUSKAL {
                 {INF,5,7,9,INF}
         };
         kruskal(graph);
+
+        long afteralgoTime = System.currentTimeMillis();
+        System.out.println(afteralgoTime);
+        System.out.println((afteralgoTime-currentTime));
     }
 }

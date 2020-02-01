@@ -3,10 +3,10 @@ import java.io.InputStreamReader;
 
 /**
  * @author Micgogi
- * on 2/1/2020  9:12 PM
+ * on 2/1/2020  9:35 PM
  * Micgogi
  */
-public class CC_NUMFACT {
+public class SIEVEOFERASTOSTHENES {
     static boolean prime[] = new boolean[1000001];
     public static void main(String[] args) {
         int[] primes = new int[78498];
@@ -22,9 +22,9 @@ public class CC_NUMFACT {
             int t = Integer.parseInt(br.readLine());
             while (t--!=0){
                 int n = Integer.parseInt(br.readLine());
-                String s = br.readLine();
-                int count[] = new int [78498];
-                String s1[] = s.split(" ");
+               String s = br.readLine();
+               int count[] = new int [78498];
+               String s1[] = s.split(" ");
                 for (int i = 0; i <s1.length ; i++) {
                     int n1 = Integer.parseInt(s1[i]);
                     for (int j = 0; j < primes.length&&primes[j]<=n1; j++) {
@@ -53,9 +53,9 @@ public class CC_NUMFACT {
         }
         for (int i = 2; i <=Math.sqrt(n); i++) {
             if(prime[i])
-                for (int j = i*2; j <n; j+=i) {
-                    prime[j]=false;
-                }
+            for (int j = i*2; j <n; j+=i) {
+                prime[j]=false;
+            }
         }
 
     }

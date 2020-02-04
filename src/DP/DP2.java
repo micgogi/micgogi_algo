@@ -1,4 +1,4 @@
-public class LPStest {
+public class DP2 {
     public static void main(String[] args) {
         System.out.println(lps("abbbc"));
     }

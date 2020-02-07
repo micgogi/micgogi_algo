@@ -9,10 +9,10 @@ public class LC62 {
         int m =51,n=9;
         System.out.println(num(m,n));
     }
-    
+
     //Using Dp O(m*n)
     public static int num(int m, int n){
-     int count[][] = new int[m][n];
+        int count[][] = new int[m][n];
         for (int i = 0; i <m ; i++) {
             count[i][0]=1;
         }
@@ -26,10 +26,10 @@ public class LC62 {
         }
         return count[m-1][n-1];
     }
-    //Using Recurive, complexity exponentially 
+    //Using Recurive, complexity exponentially
     public int numr(int m, int n){
-      if(m==1||n==1)return 1;
-      return num(m-1,n)+num(m,n-1);
+        if(m==1||n==1)return 1;
+        return num(m-1,n)+num(m,n-1);
     }
-    
+
 }

@@ -11,11 +11,11 @@ public class TowerOfHanoiProblem {
    public static void towerOfHanoiProblem(int n, char from, char mid, char to){
        if(n==1){
            System.out.println("move disk 1 "+from+" "+to);
-           return n;
+
        }
      towerOfHanoiProblem(n-1,from, mid,to);
      System.out.println("move disk"+n+" from"+from+" to"+to);
-     towerOfHanoiProblem(mid,from,to);
+     towerOfHanoiProblem(n-1,mid,from,to);
      
 
    }

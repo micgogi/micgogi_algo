@@ -10,7 +10,7 @@ import java.util.Stack;
 
 public class LC589
 {
-
+    static Node root;
     static class Node{
         public int val;
         public List<Node> children;

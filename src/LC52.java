@@ -4,13 +4,10 @@
  * 2:41 PM 2/7/2020
  */
 
-import javafx.geometry.Pos;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class NQueenProblem {
+public class LC52 {
     static class Position{
         int row, col;
         Position(int row, int col){

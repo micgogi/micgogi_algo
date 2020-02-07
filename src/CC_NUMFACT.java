@@ -47,7 +47,7 @@ public class CC_NUMFACT {
     }
     public static  void soe(){
         int n = prime.length;
-
+        int max = Integer.MAX_VALUE;
         for (int i = 2; i <n ; i++) {
             prime[i]=true;
         }

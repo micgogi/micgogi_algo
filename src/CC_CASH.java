@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 
 public class CC_CASH {
     public static void main(String[] args) {
@@ -80,24 +80,28 @@ public class CC_CASH {
                 ArrayList<Integer> no = new ArrayList<>();
                 int  c[] = {0,1,2,3};
                 int i=0;
-                    while(i<=n) {
+                    while(i<4) {
                         int max=0;
+                        int index=0;
                         for (int j = 0; j < 4; j++) {
                             if(a[j][i]>max){
                                 max=a[j][i];
+                                index =j;
                             }
 
                         }
                         no.add(max);
+                        c[index]=-1;
                         max=0;
                         i++;
                     }
 
                 System.out.println(no);
+                System.out.println(Arrays.toString(c));
 
             }
         }catch (Exception e){
-
+            e.printStackTrace();
         }
     }
 }

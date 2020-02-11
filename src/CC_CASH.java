@@ -2,15 +2,18 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class CC_CASH {
     public static void main(String[] args) {
         try{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int t = Integer.parseInt(br.readLine());
+            int total =0;
             while(t--!=0){
-             int n = Integer.parseInt(br.readLine());
+                int n = Integer.parseInt(br.readLine());
                 int a[][] = new int[4][4];
+
                 for (int i = 0; i <n ; i++) {
                     String s1 = br.readLine();
                     String s2[] = s1.split(" ");
@@ -78,28 +81,51 @@ public class CC_CASH {
 
                 }
                 ArrayList<Integer> no = new ArrayList<>();
-                int  c[] = {0,1,2,3};
+
+               int[] c={0,1,2,3};
+               boolean founrd = false;
+
                 int i=0;
-                    while(i<4) {
-                        int max=0;
-                        int index=0;
-                        for (int j = 0; j < 4; j++) {
-                            if(a[j][i]>max){
-                                max=a[j][i];
-                                index =j;
-                            }
-
+                while(i<4) {
+                    int max=0;
+                    int index=0;
+                    for (int j = 0; j < 4; j++) {
+                        if((a[j][i] > max) && (c[j] == j)){
+                            max=a[j][i];
+                            index =j;
+                            founrd = true;
                         }
-                        no.add(max);
-                        c[index]=-1;
-                        max=0;
-                        i++;
+
                     }
+                    no.add(max);
+                    if(founrd) {
+                        c[index] = -1;
+                        founrd = false;
+                    }
+                    max=0;
+                    i++;
+                }
+                long countNoOfZero=0;
 
+               System.out.println(no);
+                Collections.sort(no);
                 System.out.println(no);
-                System.out.println(Arrays.toString(c));
-
+                long sum=0;
+                long sp = 100;
+                for (int j = no.size()-1; j>=0; j--) {
+                    if(no.get(j)>0) {
+                        sum += no.get(j) * sp;
+                        sp = sp - 25;
+                    }else{
+                        countNoOfZero++;
+                    }
+                }
+                long totalEmptyShow = countNoOfZero*100;
+                total+=(sum-totalEmptyShow);
+                System.out.println(sum-totalEmptyShow);
             }
+            System.out.println(total);
+
         }catch (Exception e){
             e.printStackTrace();
         }

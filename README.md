@@ -79,5 +79,6 @@
 
 ## Important Links  
 Algo ans DS [here](https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide)  
-DP [here](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)
+DP [here](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)  
+Mot[here](https://leetcode.com/discuss/interview-experience/505108/nda-google-l4l5-japan-feb-2020-pending)
 

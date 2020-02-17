@@ -78,7 +78,19 @@
 
 
 ## Important Links  
-Algo ans DS [here](https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide)  
-DP [here](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)  
-Mot[here](https://leetcode.com/discuss/interview-experience/505108/nda-google-l4l5-japan-feb-2020-pending)
+Algo ans DS   
+
+1-> [LC POST](https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide)   
+2-> [DS](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)  
+  
+DP  
+1-> [LC POST](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns) 
+
+System Design  
+1-> [Github Link](https://github.com/donnemartin/system-design-primer)  
+2-> [Github](https://github.com/binhnguyennus/awesome-scalability)  
+
+Netwoking
+1-> [WS](https://hpbn.co/)
+
 

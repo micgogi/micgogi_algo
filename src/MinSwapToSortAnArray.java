@@ -14,7 +14,7 @@ public class MinSwapToSortAnArray {
             hashMap.put(i,a[i-1]);
         }
         int count=0;
-        for (int i = 1; i <= hashMap.size() ; i++) {
+        for (int i = 1; i <= hashMap.size(); i++) {
             int nextValue;
             if(!visited[i]){
                 visited[i]=true;

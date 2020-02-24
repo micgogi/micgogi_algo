@@ -89,7 +89,8 @@ DP
 System Design  
 1-> [Github Link](https://github.com/donnemartin/system-design-primer)  
 2-> [Github](https://github.com/binhnguyennus/awesome-scalability)  
-3-> [YT](https://www.youtube.com/playlist?list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)
+3-> [YT](https://www.youtube.com/playlist?list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)  
+4-> [SD Interview](https://www.youtube.com/watch?v=q0KGYwNbf-0)
 
 Netwoking  
 1-> [WS](https://hpbn.co/)

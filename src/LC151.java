@@ -16,5 +16,26 @@ public class LC151 {
             }
         }
         System.out.println(s2.trim());
+         System.out.println(rev(s));
+    }
+    
+    //Optimized
+    public static String rev(String s) {
+        StringBuilder sb = new StringBuilder();
+        int j = s.length()-1;
+        while(j>=0){
+            if(s.charAt(j)==' '){
+                --j;
+                continue;
+            }
+            int i = s.lastIndexOf(' ',j);
+            sb.append(s.substring(i+1,j+1));
+            j=i-1;
+            sb.append(' ');
+
+
+        }
+        return sb.length()==0?"": sb.substring(0,sb.length()-1);
+
     }
 }

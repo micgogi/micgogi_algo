@@ -32,7 +32,7 @@ public class LC116Pract {
             if(temp.next!=null){
                 temp.right.next= temp.next.left;
             }else{
-                temp.right.next =null
+                temp.right.next =null;
             }
         }
         connect(temp.left);

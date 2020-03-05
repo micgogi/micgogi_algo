@@ -30,7 +30,7 @@ public class LC98 {
     }
     public static boolean check(Node root){
        long min = Long.MIN_VALUE;
-       int max = Long.MAX_VALUE
+       long max = Long.MAX_VALUE;
        return checkBst(root,min,max);
     }
 }

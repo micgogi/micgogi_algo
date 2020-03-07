@@ -16,7 +16,6 @@ public class ComplexNumberMul {
         Complex( long real, long img){
         this.real = real;
         this.img = img;
-
     }
     Complex(){
 

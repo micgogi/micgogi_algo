@@ -30,10 +30,10 @@ public class LC107 {
         System.out.println(levelOrder(root));
     }
 
-    public int height(TreeNode root){
-        if(root==null)return 0;
-        return 1+Math.max(height(root.left),height(root.right));
-    }
+//    public int height(TreeNode root){
+//        if(root==null)return 0;
+//        return 1+Math.max(height(root.left),height(root.right));
+//    }
     public static List<List<Integer>> levelOrder(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<TreeNode>();
         q.add(root);
@@ -55,10 +55,12 @@ public class LC107 {
 
 
         }
-        List<List<Integer>>  list1= list;
+        List<List<Integer>>  list1= new ArrayList<>();
 
+        for (int i = list.size()-1; i >=0 ; i--) {
+            list1.add(list.get(i));
+        }
 
-
-        return list;
+        return list1;
     }
 }

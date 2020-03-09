@@ -10,7 +10,7 @@ import java.util.Stack;
  * area = intput[top]*i
  * }
  *else{
- *area= intput[top]*(i-1)
+ *area= intput[top]*(i-1-stacktop)
  * }
  *
  *

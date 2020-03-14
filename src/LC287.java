@@ -7,7 +7,7 @@ package DP;/*
 
 import java.util.HashMap;
 
-public class Lc287 {
+public class LC287 {
     public static void main(String[] args) {
         int a[] = {1,3,4,2,2};
         HashMap<Integer,Integer> map = new HashMap<>();

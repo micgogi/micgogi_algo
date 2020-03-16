@@ -4,7 +4,7 @@ import java.util.Stack;
 /**
  * @author Micgogi
  * on 12/6/2019  12:46 AM
- * 65 78 75 73 84 65
+ *
  */
 public class LC9 {
     public static void main(String[] args) {

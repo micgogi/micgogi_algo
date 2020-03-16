@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Micgogi
  * on 11/18/2019  1:11 AM
- * 65 78 75 73 84 65
+ *
  */
 public class LC4 {
     public static void main(String[] args) {

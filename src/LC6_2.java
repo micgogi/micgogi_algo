@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * @author Micgogi
  * on 11/19/2019  11:51 PM
- * 65 78 75 73 84 65
+ *
  */
 public class LC6_2 {
     public static void main(String[] args) {

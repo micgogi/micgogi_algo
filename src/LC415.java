@@ -1,4 +1,4 @@
-package DP;/*
+/*
  *@author Rahul Gogyani
 
  *
@@ -10,7 +10,7 @@ import java.util.Stack;
 public class LC415 {
     public static void main(String[] args) {
         String s1 ="8265728576";
-        String s2 = "657875738565";
+        String s2 = "657875738465";
       Stack<Integer> stack1 = new Stack<>();
       Stack<Integer> stack2 = new Stack<>();
         for (int i = 0; i <s1.length() ; i++) {

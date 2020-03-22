@@ -28,7 +28,10 @@ public class WTest3 {
     }
 
     public static void main(String[] args) {
-        int a[] = {7 ,4 ,1, 2, 2, 9, 8, 9};
+        int a[] = new int[100000];
+        for(int i=0;i<100000;i++){
+            a[i]=i;
+        }
         System.out.println(findsubArray(a,14));
     }
 }

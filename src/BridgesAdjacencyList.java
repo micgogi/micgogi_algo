@@ -1,8 +1,4 @@
- *@author Rahul Gogyani
 
- *
- * 10:14 AM 3/18/2020
- */
 
 import java.util.ArrayList;
 import java.util.List;

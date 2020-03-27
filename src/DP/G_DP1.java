@@ -7,7 +7,7 @@ package DP;
 public class G_DP1 {
     public static void main(String[] args) {
         int a[] = new int[50];
-        System.out.println(uglyNumber(150));
+        System.out.println(uglyNumber(10));
     }
     public  static int uglyNumber(int n){
         int ugly[] = new int[n];

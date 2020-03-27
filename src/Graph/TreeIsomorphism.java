@@ -1,6 +1,5 @@
-package Graph;
 /*
- *@author Rahul Gogyani
+ *@author Ragul Gogyani
 
  *
  * 10:19 AM 3/4/2020

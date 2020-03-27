@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author Micgogi
  * on 11/24/2019  9:55 PM
- *
+ * 65 78 75 73 84 65
  */
 public class ALPHABET {
     public static void main(String[] args) {

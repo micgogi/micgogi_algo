@@ -2,7 +2,10 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Arrays;
+=======
+>>>>>>> changes
 
 /**
  * @author Micgogi
@@ -38,6 +41,7 @@ public class Wtest1 {
 
     static int[] Solution(int N, int M, int[][] roads){
         // Write your code here
+<<<<<<< HEAD
 
     int a[] = new int[N+1];
         Arrays.fill(a,1);
@@ -69,6 +73,61 @@ public class Wtest1 {
         }
         return ret;
 
+=======
+        int a[]=new int[N+1];
+        int count=0;
+        ArrayList<Integer> list=new ArrayList<>();
+        for (int i=1;i<=N;i++)a[i]=1;
+        for(int i=0;i<roads.length;i++){
+            a[roads[i][0]]=0;
+            for(int j=i+1;j<a.length;j++){
+                if(a[j]!=0)count++;
+            }
+            list.add(count);
+
+        }
+        int[] ret = new int[list.size()];
+        for (int i=0; i < ret.length; i++)
+        {
+            ret[i] = list.get(i).intValue();
+        }
+        return ret;
+
+
+
+
+//    int a[] = new int[N+1];
+//        Arrays.fill(a,1);
+//
+//        ArrayList<Integer> arrayList = new ArrayList<>();
+//
+//        for (int i = 0; i < roads.length; i++) {
+//            for (int j = 0; j <2 ; j++) {
+//                if(roads[i][j]>0){
+//                    a[roads[i][j]]=0;
+//                    roads[i][j]=0;
+//                }
+//            }
+//
+//            int count =0;
+//            for (int k = 0; k <=N ; k++) {
+//                if(a[k]==0){
+//                    count++;
+//                }
+//            }
+//            arrayList.add(count);
+//        }
+//
+//
+//        int[] ret = new int[arrayList.size()];
+//        for (int i=0; i < ret.length; i++)
+//        {
+//            ret[i] = arrayList.get(i).intValue();
+//        }
+//        return ret;
+
+
+>>>>>>> changes
     }
     }
 

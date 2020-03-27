@@ -1,4 +1,4 @@
-/*
+package DP;/*
  *@author Rahul Gogyani
  * Cross Prudct: (a2 * b3 – a3 * b2) * i + (a3 * b1 – a1 * b3) * j + (a1 * b2 – a2 * b1) * k
  * 10:38 AM 3/11/2020

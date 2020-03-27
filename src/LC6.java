@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * @author Micgogi
  * on 11/19/2019  1:27 AM
- *
+ * 65 78 75 73 84 65
  */
 public class LC6 {
     public static void main(String[] args) {

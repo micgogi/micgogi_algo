@@ -13,9 +13,7 @@ public class TEST123 {
 
 
     public static void main(String[] args) {
-        for (int i	=	0,j	=	0;	i	<	10;	i++,j--)	{
-            System.out.print(j);
-        }
+
       try{
           BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
           int t = Integer.parseInt(br.readLine());

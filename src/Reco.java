@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Rahul {
+public class Reco {
 
     static String longestPalindrome(String str)
     {

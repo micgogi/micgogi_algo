@@ -11,7 +11,7 @@ public class TrieDataStructure {
         setOfStrings.add("pqrs");
         Trie trie = new Trie();
         setOfStrings.forEach(trie::insert);
-       System.out.println(trie.search("psst"));
+       System.out.println(trie.search("ps"));
         trie.delete("psst");
        System.out.println(trie.search("psst"));
     }

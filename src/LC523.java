@@ -8,8 +8,8 @@ import java.util.Map;
  */
 public class LC523 {
     public static void main(String[] args) {
-        int a[] = {5,0,0};
-        int k =0;
+        int a[] = {23, 2, 4, 6, 7};
+        int k =6;
        // System.out.println(checkSubarraySum(a,k));
         System.out.println(checkSubarraySumOp(a,k));
 

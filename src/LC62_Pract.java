@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * @author Micgogi
  * on 4/9/2020  11:01 AM
@@ -19,7 +21,11 @@ public class LC62_Pract {
                 count[i][j]=count[i-1][j]+count[i][j-1];
             }
         }
-
+//        int a[] = new int[5];
+//        for (int i = 0; i <5 ; i++) {
+//            a[i]=i;
+//        }
+//        System.out.println(Arrays.toString(Arrays.copyOfRange(a,2,6)));
         System.out.println(count[m-1][n-1]);
     }
 }

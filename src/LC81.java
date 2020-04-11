@@ -1,15 +1,18 @@
 /**
  * @author Micgogi
- * on 4/11/2020  2:46 PM
+ * on 4/11/2020  3:26 PM
  * Rahul Gogyani
  */
-public class LC33 {
+public class LC81 {
     public static void main(String[] args) {
         int a[] = {2,5,6,0,0,1,2};
         int left = 0;
         int right = a.length - 1;
         int target = 3;
+        while(left<right&&a[left]==a[right]){
+            right--;
 
+        }
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (target == a[mid]) {

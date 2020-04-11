@@ -17,7 +17,7 @@ public class LC443 {
                 if(count1.length()==1){
 
                 }else{
-                    
+
                 }
                 arrayList.add((""+count).charAt(0));
                 arrayList.add(a[i]);

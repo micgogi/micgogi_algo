@@ -1,11 +1,11 @@
 /**
  * @author Micgogi
- * on 4/11/2020  10:02 AM
+ * on 4/11/2020  10:34 AM
  * Rahul Gogyani
  */
-public class LC153 {
+public class LC154 {
     public static void main(String[] args) {
-        int a[] = {0,0,0,0,1,2,4,5,6,7,7,7,7,7,7,7};
+        int a[] = {3,3,1,3};
         System.out.println(findMin(a));
     }
 
@@ -14,15 +14,17 @@ public class LC153 {
         if(a.length==1)return a[0];
         int left = 0;
         int right = a.length-1;
+
+        while(left<right&&a[left]==a[right]){
+            right--;
+        }
         while (left<right){
             int mid = left+(right-left)/2;
-            if(mid>0&&a[mid]<a[mid-1]){
-                return a[mid];
-            }else if(a[left]<=a[mid]&&a[mid]>a[right]){
-                left=mid+1;
-            }else {
-                right = mid-1;
-            }
+           if(a[mid]>a[right]){
+               left=mid+1;
+           }else{
+               right=mid;
+           }
         }
         return a[left];
     }

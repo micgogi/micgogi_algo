@@ -6,7 +6,7 @@ import java.util.List;
  * on 12/9/2019  11:25 PM
  * Micgogi
  */
-public class LC46_test {
+public class LC46_Second {
     public static void main(String[] args) {
         int a[] = {1, 2, 3};
         // permut(a, a.length);

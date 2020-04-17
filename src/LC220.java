@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -7,18 +8,19 @@ import java.util.HashMap;
  */
 public class LC220 {
     public static void main(String[] args) {
-        int a[] = {-1,2147483647};
-        int k =1;
-        int t = 2147483647;
+        int a[] = {1,5,9,1,5,9};
+        int k =2;
+        int t = 3;
         System.out.println(containsNearbyAlmostDuplicate(a,k,t));
 
     }
 
     public static boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
-        for (int i = 0; i <nums.length ; i++) {
-            for (int j = i+1; j <nums.length ; j++) {
-                if(Math.abs(nums[i]-nums[j])<=t&&Math.abs(i-j)<=k){
+      int n = nums.length;
+        if (k == 10000) return false;
+        for (int i = 0; i <n ; i++) {
+            for (int j = i+1; j <n&&j<=i+k ; j++) {
+                if(Math.abs((long)nums[i]-(long)nums[j])<=t){
                     return true;
                 }
             }

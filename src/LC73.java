@@ -7,8 +7,7 @@ import java.util.Arrays;
  */
 public class LC73 {
     public static void main(String[] args) {
-        int a[][] = {{1, 0}};
-
+        int a[][] = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
         boolean isZeroCol = false;
         boolean isZeroRow = false;
         for (int i = 0; i < a.length; i++) {

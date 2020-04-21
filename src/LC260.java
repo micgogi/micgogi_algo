@@ -24,7 +24,7 @@ public class LC260 {
         }
         System.out.println(Arrays.toString(singleNumber(a)));
     }
-    //Optimized
+
     public static int[] singleNumber(int a[]){
         int temp=0;
         for(int n:a){

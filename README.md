@@ -1,3 +1,5 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/micgogi/micgogi_algo?style=plastic)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/micgogi/micgogi_algo?style=plastic)
+
 # 65 77 65 90 79 78  
 
 [ 725][ 692] [ 682] [ 675][ 662][ 645] [ 640][ 617] [ 606][ 553][ 538][ 537] [ 535] [ 532] [ 529] [ 517] [ 516] [ 508] [460] [ 459] [ 451] [ 449] [ 438] [ 414] [ 396] 

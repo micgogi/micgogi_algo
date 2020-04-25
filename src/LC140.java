@@ -17,7 +17,7 @@ public class LC140 {
     static String[] words = {"oath", "pea", "eat", "rain"};
 
     public static void main(String[] args) {
-        System.out.println(findWords(board, words));
+        System.out.println(findWords(board,words));
     }
 
     static List<String> result;

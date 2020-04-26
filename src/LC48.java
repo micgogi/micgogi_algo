@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * @author Micgogi
@@ -13,6 +14,9 @@ public class LC48 {
                 {7, 8, 9}
         };
         rotate(a);
+
+
+
     }
 
     public static void rotate(int a[][]){

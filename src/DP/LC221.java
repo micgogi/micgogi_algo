@@ -5,7 +5,7 @@ package DP;
  * on 4/27/2020  2:28 PM
  * Rahul Gogyani
  */
-public class LC201 {
+public class LC221 {
     public static void main(String[] args) {
         int a[][] = {{1,0,1,0,0},
                 {1,0,1,1,1},

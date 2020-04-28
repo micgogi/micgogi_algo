@@ -5,61 +5,59 @@ import java.util.Map;
 
 /**
  * @author Micgogi
- * on 1/27/2020  5:14 PM
- * Micgogi
+ * on 4/28/2020  12:10 PM
+ * Rahul Gogyani
  */
-public class DisjointSet {
-    Map<Long, Node> map = new HashMap<>();
+public class DisJointSetPract1 {
+    Map<Integer, Node> map = new HashMap<>();
 
     class Node {
-        long data;
-        Node parent;
+        int data;
         int rank;
+        Node parent;
+
     }
 
-    public void makeSet(long data) {
+    public void makeSet(int data) {
         Node node = new Node();
         node.data = data;
-        node.parent = node;
         node.rank = 0;
-        map.put(data, node);
-
+        node.parent = node;
+        map.put(data,node);
     }
 
-    public boolean union(long data1, long data2) {
-        Node node1 = map.get(data1);
-        Node node2 = map.get(data2);
-        Node parent1 = findSet(node1);
-        Node parent2 = findSet(node2);
+    public int findSet(int data) {
+        return findSet(map.get(data)).data;
+    }
+
+    public Node findSet(Node n) {
+        Node parent = n.parent;
+        if (parent == n) {
+            return parent;
+        }
+        n.parent = findSet(n.parent);
+        return n.parent;
+    }
+
+    public boolean union(int a, int b) {
+        Node n1 = map.get(a);
+        Node n2 = map.get(b);
+        Node parent1 = findSet(n1);
+        Node parent2 = findSet(n2);
         if (parent1.data == parent2.data) {
             return false;
         }
         if (parent1.rank >= parent2.rank) {
-            parent1.rank = (parent1.rank == parent2.rank) ? parent1.rank + 1 : parent1.rank;
+            parent1.rank = parent1.rank == parent2.rank ? parent1.rank + 1 : parent1.rank;
             parent2.parent = parent1;
         } else {
             parent1.parent = parent2;
         }
         return true;
-
-    }
-
-    public long findSet(long data) {
-        return findSet(map.get(data)).data;
-    }
-
-
-    public Node findSet(Node node) {
-        Node parent = node.parent;
-        if (parent == node) {
-            return parent;
-        }
-        node.parent = findSet(node.parent);
-        return node.parent;
     }
 
     public static void main(String[] args) {
-        DisjointSet ds = new DisjointSet();
+        DisJointSetPract1 ds = new DisJointSetPract1();
         ds.makeSet(1);
         ds.makeSet(2);
         ds.makeSet(3);
@@ -80,6 +78,5 @@ public class DisjointSet {
         System.out.println(ds.findSet(5));
         System.out.println(ds.findSet(6));
         System.out.println(ds.findSet(7));
-
     }
 }

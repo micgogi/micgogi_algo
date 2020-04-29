@@ -17,14 +17,14 @@ public class LC124 {
     public static void main(String[] args) {
         root = new Node(-10);
         root.left = new Node(9);
-        root.right = new Node(20);
-        root.right.left = new Node(15);
-        root.right.right = new Node(7);
+        root.right = new Node(-10);
+        root.right.left = new Node(8);
+        root.right.right = new Node(10);
         System.out.println(maxPathSum(root));
     }
     static int max =0;
     public static int maxPathSum(Node root){
-        max = Integer.MIN_VALUE;
+
         return  Math.max(pathsum(root),max);
     }
     public static int pathsum(Node root){

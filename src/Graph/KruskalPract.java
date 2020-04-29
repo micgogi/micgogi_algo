@@ -54,7 +54,7 @@ public class KruskalPract {
         int e = 0;
         int i =0;
             for (int j = 0; j <v ; j++) {
-             result[i] = new Edge();
+             result[j] = new Edge();
             }
             Arrays.sort(edge);
             Subset subset[] = new Subset[v];
@@ -67,8 +67,8 @@ public class KruskalPract {
 
             }
             while(e<v-1){
-                Edge nextEdge = new Edge();
-                nextEdge = edge[i++];
+
+              Edge  nextEdge = edge[i++];
                 int x = find(subset, nextEdge.src);
                 int y = find(subset, nextEdge.dest);
                 if(x!=y){

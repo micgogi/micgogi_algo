@@ -14,7 +14,8 @@ public class Markers {
     static int[][] merge(int[][] intervals) {
         if(intervals.length<=1) return intervals;
         Arrays.sort(intervals,(arr1,arr2)->(Integer.compare(arr1[0],arr2[0])));
-        List<int[]> list =new ArrayList<>();
+        List<int[]>
+                list =new ArrayList<>();
         int[] current_interval=intervals[0];
         list.add(current_interval);
         for(int[] interval:intervals){

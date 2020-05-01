@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author Micgogi
  * on 11/16/2019  10:43 PM
@@ -34,6 +37,7 @@ public class LC3 {
       // sameSize(head1,head2);
         addTwoList(head1,head2);
         print(head3);
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
 
     }
 
@@ -109,6 +113,21 @@ public class LC3 {
         if (carry>0){
             push(carry);
         }
+    }
+
+    public static int lengthOfLongestSubstring(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int si=0,ci=0,max=0;
+
+        for (; ci <s.length() ; ci++) {
+            if(map.containsKey(s.charAt(ci))){
+                si=Math.max(si,map.get(s.charAt(ci))+1);
+
+            }
+            map.put(s.charAt(ci),ci);
+            max = Math.max(max,ci-si+1);
+        }
+        return max;
     }
 
 }

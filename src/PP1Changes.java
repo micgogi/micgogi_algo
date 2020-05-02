@@ -18,8 +18,8 @@ public class PP1Changes {
                 int n = Integer.parseInt(s[0]);
                 int k = Integer.parseInt(s[1]);
                 String s1[] = br.readLine().split(" ");
-                Integer a[] = new Integer[n];
-                int[] prefixsum = new int[n];
+                long a[] = new long[n];
+                long[] prefixsum = new long[n];
                 for (int i = 0; i < n; i++) {
                     a[i] = Integer.parseInt(s1[i]);
 
@@ -29,9 +29,9 @@ public class PP1Changes {
                     prefixsum[i]=a[i]+prefixsum[i-1];
                 }
 
-                int aliceSum = 0;
-                int b[] = new int[n];
-                int count[] = new int[n+2];
+                long aliceSum = 0;
+                long b[] = new long[n];
+                long count[] = new long[n+2];
                 for (int i = 0; i < k; i++) {
                     String s2[] = br.readLine().split(" ");
                     int x = Integer.parseInt(s2[0]);
@@ -53,8 +53,8 @@ public class PP1Changes {
                     count[i+1]+=count[i];
                 }
 
-                PriorityQueue<Integer> pqElements = new PriorityQueue<>((c, d)->d-c);
-                PriorityQueue<Integer> pqIndex =  new PriorityQueue<>((c,d)->d-c);
+                PriorityQueue<Long> pqElements = new PriorityQueue<>((c, d)-> (int) (d-c));
+                PriorityQueue<Long> pqIndex =  new PriorityQueue<>((c,d)->(int)(d-c));
                 for (int i = 0; i <a.length ; i++) {
                     pqElements.add(a[i]);
                 }
@@ -62,8 +62,8 @@ public class PP1Changes {
                     pqIndex.add(count[i]);
                 }
 
-                System.out.println(Arrays.toString(count));
-                int sum=0;
+                //System.out.println(Arrays.toString(count));
+                long sum=0;
                while (!pqElements.isEmpty()){
                    sum+=pqElements.poll()*pqIndex.poll();
                }

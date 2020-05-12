@@ -65,6 +65,7 @@ class Trie1{
 }
 class TrieNode1{
     int terminating;
+    int priority;
     TrieNode1[] trieNode1 = new TrieNode1[26];
     public TrieNode1 next(char c){
         return trieNode1[c-'a'];

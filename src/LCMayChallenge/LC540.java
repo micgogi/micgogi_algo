@@ -1,3 +1,5 @@
+package LCMayChallenge;
+
 /**
  * @author Micgogi
  * on 5/12/2020  1:40 PM

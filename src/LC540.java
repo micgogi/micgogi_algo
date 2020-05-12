@@ -11,6 +11,7 @@ public class LC540 {
         int n = a.length;
         while(left<right){
             int mid = left+(right-left)/2;
+            System.out.println(mid^1);
             if(a[mid]==a[mid^1]){
                 left=mid+1;
             }else{

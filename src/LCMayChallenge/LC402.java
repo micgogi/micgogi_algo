@@ -7,8 +7,8 @@ package LCMayChallenge;
  */
 public class LC402 {
     public static void main(String[] args) {
-        String s = "1432219";
-        int k =3;
+        String s = "123561";
+        int k =1;
 
         for (int i = 1; i <=k ; i++) {
           s=  removeDigit(s,k);
@@ -20,7 +20,7 @@ public class LC402 {
         int n = s.length();
         int i = n-1;
         for (int j = 0; j <i ; j++) {
-            if(s.charAt(j)>s.charAt(j+1)){
+            if(s.charAt(j)<s.charAt(j+1)){
                 i=j;
                 break;
             }

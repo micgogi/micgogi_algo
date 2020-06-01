@@ -28,7 +28,11 @@
 
 ##### DP  
 1-> [LC POST](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns) 
-
+2-> [DP PROBLEMS](https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions)
+##### GRAPH  
+1-> [GRAPH PROBLEMS](https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions)  
+##### SLIDING WINDOW  
+1-> [SLIDING WINDOW](https://leetcode.com/discuss/general-discussion/657507/sliding-window-for-beginners-problems-template-sample-solutions)
 ##### System Design  
 1-> [Github Link](https://github.com/donnemartin/system-design-primer)  
 2-> [Github](https://github.com/binhnguyennus/awesome-scalability)  

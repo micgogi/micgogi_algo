@@ -27,7 +27,7 @@
 2-> [DS](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)  
 
 ##### DP  
-1-> [LC POST](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns) 
+1-> [LC POST](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)  
 2-> [DP PROBLEMS](https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions)
 ##### GRAPH  
 1-> [GRAPH PROBLEMS](https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions)  

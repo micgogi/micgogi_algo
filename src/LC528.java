@@ -59,10 +59,10 @@ public class LC528 {
     public int pickIndex() {
         int pos = random.nextInt(sum[sum.length - 1]);
         int l = 0, r = sum.length - 1;
-        while (l <= r) {
+        while (l < r) {
             int m = l + (r - l) / 2;
-            if (sum[m] < pos) l = m + 1;
-            else r = m+1;
+            if (sum[m] <= pos) l = m + 1;
+            else r = m;
         }
         return l;
     }

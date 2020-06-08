@@ -7,7 +7,7 @@ package DP;
  */
 public class MatrixChainMultiplication {
     public static void main(String[] args) {
-        int a[] = {4,2,3,5,3};
+        int a[] = {2,3,6,4,5};
         int q=0;
         int dp[][]  = new int[a.length][a.length];
         for (int l = 2; l <a.length ; l++) {

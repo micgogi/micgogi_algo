@@ -21,7 +21,7 @@ public class A1362 {
                 if (d % c == 0) {
                     q = d / c;
                 }
-                if (q == 0) r = 1;
+                if (q == 0) r = -1;
                 else {
                     while (q != 1) {
                         if (q >= 8 && q % 8 == 0) {

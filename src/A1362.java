@@ -41,10 +41,10 @@ public class A1362 {
 
                 }
                 System.out.println(r);
-                t--;
+
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 }

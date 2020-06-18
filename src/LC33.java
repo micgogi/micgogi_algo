@@ -5,10 +5,10 @@
  */
 public class LC33 {
     public static void main(String[] args) {
-        int a[] = {2,5,6,0,0,1,2};
+        int a[] = {4,5,6,7,0,1,2};
         int left = 0;
         int right = a.length - 1;
-        int target = 3;
+        int target = 0;
 
         while (left <= right) {
             int mid = left + (right - left) / 2;

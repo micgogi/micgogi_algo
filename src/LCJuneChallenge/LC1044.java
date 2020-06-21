@@ -27,7 +27,7 @@ public class LC1044 {
         int max = s.length()-1;
         int mid;
         while(min<max-1){
-            mid = (min+max)/2;
+            mid = min+(max-min)/2;
             if(searchForLength(s,mid)!=null){
                 min = mid;
             }else{
@@ -76,8 +76,9 @@ public class LC1044 {
                 map.put(hash,equalHashIndex);
             }else {
                 for (int i:equalHashIndex){
-                    if(s.substring(from,to).equals(s.substring(i,i+len))){
-                        return s.substring(i,i+len);
+
+                    if(s.substring(from,to).equals(s.substring(i, i + len))){
+                        return s.substring(i, i + len);
                     }
                 }
             }
@@ -87,7 +88,7 @@ public class LC1044 {
 
     }
     public static void main(String[] args) {
-        String s = "kiananata";
+        String s = "banana";
         System.out.println(longestDuplicateSubstring(s));
     }
 

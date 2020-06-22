@@ -1,3 +1,5 @@
+package LCJuneChallenge;
+
 /**
  * @author Micgogi
  * on 4/21/2020  11:18 AM

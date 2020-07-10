@@ -2,10 +2,10 @@ import java.util.*;
 
 /**
  * @author Micgogi
- * on 7/10/2020  7:04 PM
+ * on 7/10/2020  7:24 PM
  * Rahul Gogyani
  */
-public class LC349 {
+public class Lc350 {
 
     public static void main(String[] args) {
         int a[] = {1,2,2,1};
@@ -15,15 +15,15 @@ public class LC349 {
             map.putIfAbsent(a[i],0);
             map.put(a[i],map.get(a[i])+1);
         }
-        Set<Integer> set = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i <b.length ; i++) {
             map.getOrDefault(b[i],0);
             if(map.get(b[i])>0){
-                set.add(b[i]);
-
+                list.add(b[i]);
+                map.put(b[i],map.get(b[i])-1);
 
             }
         }
-        System.out.println(set);
+        System.out.println(list);
     }
 }

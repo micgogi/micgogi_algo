@@ -12,44 +12,42 @@ public class C1360 {
     public static void main(String args[]) {
         FastReader sc = new FastReader();
         int t = sc.nextInt();
-        while (t--!=0){
+        while (t-- != 0) {
             int n = sc.nextInt();
             int a[] = new int[n];
-            int e=0,o=0;
-            for (int i = 0; i <n ; i++) {
+            int e = 0, o = 0;
+            for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
-                if(a[i]%2==0){
+                if (a[i] % 2 == 0) {
                     e++;
-                }else{
+                } else {
                     o++;
                 }
             }
-
-            System.out.println(cala(e,o,n,a));
-
-
+            System.out.println(cala(e, o, n, a));
         }
 
     }
 
-    public static String cala(int e, int o, int n, int a[]){
-        if(e%2!=o%2){
+    public static String cala(int e, int o, int n, int a[]) {
+        if (e % 2 != o % 2) {
             return "NO";
-        }else{
-            if(e%2==0){
+        } else {
+            if (e % 2 == 0) {
                 return "YES";
-            }else {
-                for (int i = 0; i <n ; i++) {
-                    for (int j = i+1; j <n ; j++) {
-                        if(a[i]%2!=a[j]%2&&Math.abs(a[i]-a[j])==1){
-                           return "YES";
+            } else {
+                for (int i = 0; i < n; i++) {
+                    for (int j = i + 1; j < n; j++) {
+                        if (a[i] % 2 != a[j] % 2 && Math.abs(a[i] - a[j]) == 1) {
+                            return "YES";
                         }
                     }
                 }
-               return "NO";
+                return "NO";
             }
         }
     }
+
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;

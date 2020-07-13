@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -22,10 +23,29 @@ public class LC719 {
         FastReader sc = new FastReader();
        int nums[] = {1,3,1};
        int k=2;
-        System.out.println(smallestDistancePair(nums,k));
+        System.out.println(smallestDistancePair1(nums,k));
 
     }
-    //TLE
+    //AC code using BInary Search
+    public static int smallestDistancePair1(int[] nums, int k) {
+        Arrays.sort(nums);
+        int lo = 0;
+        int hi = nums[nums.length-1]-nums[0];
+        while (lo<hi){
+            int mi = (lo+hi)/2;
+            int count =0, left =0;
+            for (int right = 0; right <nums.length ; right++) {
+                while (nums[right]-nums[left]>mi)left++;
+                count+=right-left;
+
+            }
+            if(count>=k)hi=mi;
+            else lo = mi+1;
+
+        }
+        return lo;
+    }
+//TLE
     public static int smallestDistancePair(int[] nums, int k) {
         PriorityQueue<Pair> priorityQueue = new PriorityQueue<>((obj1,obj2)->(Math.abs(obj1.first-obj1.second)-Math.abs(obj2.first-obj2.second)));
         for (int i = 0; i <nums.length-1 ; i++) {

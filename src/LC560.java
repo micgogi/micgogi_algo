@@ -7,24 +7,22 @@ import java.util.HashMap;
  */
 public class LC560 {
     public static void main(String[] args) {
-        int a[] = {10,2,-2,-20,10};
-        int k =-10;
+        int a[] = {1,1,-1};
+        int k =0;
         HashMap<Integer,Integer> map = new HashMap<>();
         int res =0;
         int currSum =0;
+        map.put(0,1);
         for (int i = 0; i <a.length ; i++) {
             currSum+=a[i];
-            if(currSum==k)res++;
+
             if(map.containsKey(currSum-k)){
                 res+=map.get(currSum-k);
             }
-            Integer count = map.get(currSum);
-            if(count==null){
-                map.put(currSum,1);
-            }
-            else{
-                map.put(currSum,count+1);
-            }
+
+                map.put(currSum,map.getOrDefault(currSum,0)+1);
+
         }
+        System.out.println(res);
     }
 }

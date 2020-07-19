@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
  * on 7/19/2020  10:39 AM
  * Rahul Gogyani
  */
-public class LC05Pract {
+public class LC105Pract {
     static  class TreeNode{
         int val;
         TreeNode left;

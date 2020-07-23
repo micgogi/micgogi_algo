@@ -35,23 +35,17 @@ public class LC523 {
     //optimized
 
     public static boolean checkSubarraySumOp(int[] nums, int k) {
-        if(nums.length < 2) return false;
-        for(int i=1; i< nums.length; i++){
-            if(nums[i] == 0 && nums[i-1] == 0){
-                return true;
+       Map<Integer,Integer> map = new HashMap<>();
+       int sum =0;
+        for (int i = 0; i <nums.length ; i++) {
+            sum+=nums[i];
+            if(k!=0)sum%=k;
+            Integer prev = map.get(sum);
+            if(prev!=null){
+                if(i-prev>1)return true;
+            }else{
+                map.put(sum,i);
             }
-        }
-        if(k == 0) return false;
-
-        Map<Integer,Integer> remToPos = new HashMap<>();
-        int remainderSoFar = 0;
-        for(int i=0; i < nums.length; i++){
-            remainderSoFar = (remainderSoFar + nums[i])%k;
-            if(remainderSoFar == 0 && i>0) return true;
-            if(remToPos.containsKey(remainderSoFar) && remToPos.get(remainderSoFar) < i-1){
-                return true;
-            }
-            remToPos.put(remainderSoFar,i);
         }
         return false;
     }

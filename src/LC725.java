@@ -39,6 +39,7 @@ public class LC725 {
             list[j++]=start;
         }
 
+
     }
 
     static int size(Node head){

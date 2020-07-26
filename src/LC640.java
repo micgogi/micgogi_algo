@@ -12,22 +12,47 @@ public class LC640 {
     public static void main(String args[]) {
         FastReader sc = new FastReader();
         String eq = sc.nextLine();
+        System.out.println(solveEq(eq));
 
 
     }
-    public static String solveEq(String eq){
+
+    public static String solveEq(String eq) {
         String[] parts = eq.split("=");
         String left = parts[0];
         String right = parts[1];
         int[] leftval = evaluate(left);
         int[] rightval = evaluate(right);
-        int countX = leftval[0]- rightval[0];
-        int countNum = leftval[1]-rightval[1];
+        int countX = leftval[0] - rightval[0];
+        int countNum = leftval[1] - rightval[1];
+        if (countX == 0) {
+            if (countNum != 0) {
+                return "No solution";
+            }
+            return "Infinite solutions";
+        }
+        int valX = (-countNum) / countX;
+        StringBuilder sb = new StringBuilder();
+        sb.append("x=").append(valX);
+        return sb.toString();
 
     }
 
-    private static int[] evaluate(String left) {
-
+    private static int[] evaluate(String eq) {
+        int[] results = new int[2];
+        String[] eqElements = eq.split("(?=[-+])");
+        for (String eqEle : eqElements) {
+            if (eqEle.equals("+x") || eqEle.equals("x")) {
+                results[0]++;
+            } else if (eqEle.equals("-x")) {
+                results[0]--;
+            } else if (eqEle.contains("x")) {
+                results[0] += Integer.parseInt(eqEle.substring(0, eqEle.indexOf("x")));
+            } else {
+                results[1] += Integer.parseInt(eqEle);
+            }
+        }
+        return results;
     }
 
     static class FastReader {

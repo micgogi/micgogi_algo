@@ -37,7 +37,6 @@ public class LC106 {
         }
         root.right = construct(postIndex-1,inIndex+1,inEnd,inOrder,postOrder);
         root.left = construct(postIndex-(inEnd-inIndex+1),inStart,inIndex-1,inOrder,postOrder);
-
         return root;
     }
 

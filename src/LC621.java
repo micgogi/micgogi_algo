@@ -20,7 +20,7 @@ public class LC621 {
         int cnt =1;
         for (int c:count){
             if (c==0)continue;
-            if(c<max){
+            if(max<c){
                 max=c;
                 cnt=1;
             }else if(max==c){

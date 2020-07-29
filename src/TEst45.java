@@ -1,4 +1,9 @@
+import com.sun.xml.internal.ws.api.model.wsdl.editable.EditableWSDLModel;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Micgogi
@@ -21,5 +26,30 @@ public class TEst45 {
             x[i+1]+=x[i];
         }
         System.out.println(Arrays.toString(x));
+        Employee employee1 = new Employee("Ankita",120000);
+        Employee employee2 = new Employee("Rahul",10000);
+        Employee employee3 = new Employee("ddd",1233);
+        List<Employee> list = new ArrayList<>();
+        list.add(employee1);
+        list.add(employee2);
+        list.add(employee3);
+        List<Employee>list1=list.stream().filter(employee -> employee.sal>1300).sorted().collect(Collectors.toList());
+        System.out.println(list1.get(0).name+" "+list1.get(0).sal);
+        System.out.println(list1.get(1).name+" "+list1.get(1).sal);
+    }
+
+
+}
+class Employee implements Comparable<Employee>{
+    String name;
+    int sal;
+    public Employee(String name, int sal){
+        this.name = name;
+        this.sal = sal;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return o.sal-this.sal;
     }
 }

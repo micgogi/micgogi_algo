@@ -24,7 +24,7 @@ public class LC309 {
         }
         dp[0][0] = -prices[0];//buy
         dp[0][1] = 0;
-        dp[1][0] = -Math.min(prices[1],prices[0]);
+        dp[1][0] = Math.max(prices[1],prices[0]);
         dp[1][1] = Math.max(0,prices[1]-prices[0]);
         for (int i = 2; i <prices.length ; i++) {
             dp[i][0] = Math.max(dp[i-1][0],dp[i-2][1]-prices[i]);

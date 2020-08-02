@@ -18,34 +18,44 @@ public class TH3 {
             int Y = Integer.parseInt(inputs[2]);
             int Z = Integer.parseInt(inputs[3]);
             int T = Integer.parseInt(inputs[4]);
-           //String[] matrixElements = br.readLine().split(" ");
+           String[] matrixElements = br.readLine().split(" ");
             long[] matrixEle = new long[N];
             for (int i = 0; i <matrixEle.length ; i++) {
-                matrixEle[i] =i+1;
+                matrixEle[i] = Integer.parseInt(matrixElements[i]);
             }
 
-            long ans = 0;
-            HashMap<Integer, LinkedList<Long>> map = new HashMap<>();
-            for (int i = 0; i <N ; i++) {
-                map.putIfAbsent(i,new LinkedList<>());
-                for (int j = 0; j <N ; j++) {
-                    LinkedList<Long> list = map.get(i);
-                    list.addLast(matrixEle[i]&matrixEle[j]);
-                    map.put(i,list);
-                }
+//            long ans = 0;
+//            for (int i = X-1; i <=Z-1 ; i++) {
+//
+//                for (int j = Y-1; j <=T-1 ; j++) {
+//                    System.out.println(matrixEle[i]&matrixEle[j]);
+//                    ans^=matrixEle[i]&matrixEle[j];
+//                }
+//            }
+//            System.out.println("for "+ans);
+            long ans2 =0;
+            for(int i=X-1;i<=Z-1;i++){
+                ans2^=matrixEle[i];
             }
+            long ans3 =0;
+            for (int j = Y-1; j <=T-1 ; j++) {
+                //System.out.println(matrixEle[j]);
+                ans3^=matrixEle[j];
+            }
+           // System.out.println("other"+ans2);
+            System.out.println("otehr"+(ans2&ans3));
             //System.out.println(Arrays.deep ToString(M));
-            System.out.println(map);
-            int row = X-1;
-            int col = Y-1;
-            int rowEnd = Z-1;
-            int colEnd = T-1;
-            for (int i = row; i <=rowEnd ; i++) {
-                for (int j = col; j <=colEnd ; j++) {
-                    ans= ans^map.get(i).get(j);
-                }
-            }
-            System.out.println(ans);
+//            System.out.println(map);
+//            int row = X-1;
+//            int col = Y-1;
+//            int rowEnd = Z-1;
+//            int colEnd = T-1;
+//            for (int i = row; i <=rowEnd ; i++) {
+//                for (int j = col; j <=colEnd ; j++) {
+//                    ans= ans^map.get(i).get(j);
+//                }
+//            }
+//            System.out.println(ans);
 
         } catch (Exception e) {
 

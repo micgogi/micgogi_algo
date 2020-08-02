@@ -12,64 +12,63 @@ import java.util.StringTokenizer;
  */
 public class TH1 {
     public static void main(String args[]) {
-        FastReader sc = new FastReader();
-        int n = sc.nextInt();
-//        String colors[] = sc.nextLine().split("");
-//        String numbers[] = sc.nextLine().split("");
-        String colors[] = new String[n];
-        String numbers[] = new String[n];
-        for (int i = 0; i <n; i++) {
-            colors[i]= "R";
-            numbers[i]=String.valueOf(i%10);
-        }
-        int dp[][] = new int[3][10];
 
-        for (int i = 0; i <n ; i++) {
-          if(colors[i].equals("R")){
-              dp[0][Integer.parseInt(numbers[i])]++;
-          }
-          if(colors[i].equals("G")){
-             dp[1][Integer.parseInt(numbers[i])]++;
-          }
-          if(colors[i].equals("B")){
-              dp[2][Integer.parseInt(numbers[i])]++;
-          }
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+          int n = Integer.parseInt(br.readLine());
+            String colors[] = br.readLine().split("");
+            String numbers[] = br.readLine().split("");
+            int dp[][] = new int[3][10];
 
-        }
-        String res="";
-        int redidx=0;
-        int greenidx=1;
-        int blueidx =2;
-
-        for (int j = 0; j <n ; j++) {
-            for (int i = 9; i >=0 ; i--) {
-               if(colors[j].equals("R")){
-                   if(dp[redidx][i]!=0){
-                       dp[redidx][i]--;
-                       res+=i;
-                       break;
-                   }
-
-               }
-                if(colors[j].equals("G")){
-                    if(dp[greenidx][i]!=0){
-                        dp[greenidx][i]--;
-                        res+=i;
-                        break;
-                    }
-
+            for (int i = 0; i <n ; i++) {
+                if(colors[i].equals("R")){
+                    dp[0][Integer.parseInt(numbers[i])]++;
                 }
-                if(colors[j].equals("B")){
-                    if(dp[blueidx][i]!=0){
-                        dp[blueidx][i]--;
-                        res+=i;
-                        break;
-                    }
+                if(colors[i].equals("G")){
+                    dp[1][Integer.parseInt(numbers[i])]++;
+                }
+                if(colors[i].equals("B")){
+                    dp[2][Integer.parseInt(numbers[i])]++;
+                }
 
+            }
+            String res="";
+            int redidx=0;
+            int greenidx=1;
+            int blueidx =2;
+
+            for (int j = 0; j <n ; j++) {
+                for (int i = 9; i >=0 ; i--) {
+                    if(colors[j].equals("R")){
+                        if(dp[redidx][i]!=0){
+                            dp[redidx][i]--;
+                            res+=i;
+                            break;
+                        }
+
+                    }
+                    if(colors[j].equals("G")){
+                        if(dp[greenidx][i]!=0){
+                            dp[greenidx][i]--;
+                            res+=i;
+                            break;
+                        }
+
+                    }
+                    if(colors[j].equals("B")){
+                        if(dp[blueidx][i]!=0){
+                            dp[blueidx][i]--;
+                            res+=i;
+                            break;
+                        }
+
+                    }
                 }
             }
+            System.out.println(res);
+        }catch (Exception e){
+
         }
-        System.out.println(res);
+
 
 //        System.out.println(numbers);
 //        char colorsArr[] = colors.toCharArray();

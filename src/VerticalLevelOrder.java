@@ -3,7 +3,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 public class VerticalLevelOrder {
-    static TreeMap<Integer, ArrayList> tm = new TreeMap<>();
+    static TreeMap<Integer, ArrayList<Integer>> tm = new TreeMap<>();
     static ArrayList<Integer> al;
     static Node root;
     static class Node{
@@ -19,7 +19,7 @@ public class VerticalLevelOrder {
     public static void vertical(Node temp, int level){
        if(temp==null)return;
        if(tm.containsKey(level)){
-           ArrayList x = tm.get(level);
+           ArrayList<Integer> x = tm.get(level);
            x.add(temp.data);
            tm.put(level,x);
        }else{

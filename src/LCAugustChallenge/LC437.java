@@ -46,10 +46,10 @@ public class LC437 {
         if (root == null) return 0;
         curSum = curSum + root.data;
         int res = map.getOrDefault(curSum - sum, 0);
-        map.put(curSum, map.getOrDefault(curSum,0) + 1);
+        map.put(curSum, map.getOrDefault(curSum, 0) + 1);
         int left = helper(root.left, curSum, sum);
         int right = helper(root.right, curSum, sum);
-        res+=left+right;
+        res += left + right;
         map.put(curSum, map.get(curSum) - 1);
         return res;
 

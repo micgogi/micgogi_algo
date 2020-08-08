@@ -7,8 +7,8 @@ import java.util.HashMap;
  */
 public class LC560 {
     public static void main(String[] args) {
-        int a[] = {1,1,-1};
-        int k =0;
+        int a[] = {1,2,3,6,6,6};
+        int k =6;
         HashMap<Integer,Integer> map = new HashMap<>();
         int res =0;
         int currSum =0;

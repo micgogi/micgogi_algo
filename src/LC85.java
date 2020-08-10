@@ -7,6 +7,7 @@ import java.util.Stack;
  */
 public class LC85 {
     public static void main(String[] args) {
+        String s = "dhfh";
         char c[][] = {{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}};
         int a[][]=new int[c.length][c[0].length];
         for (int i = 0; i <c.length ; i++) {

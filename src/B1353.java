@@ -1,43 +1,44 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.StringTokenizer;
-import java.util.TreeMap;
 
 /**
  * @author Micgogi
- * on 8/14/2020  12:34 PM
+ * on 8/14/2020  4:07 PM
  * Rahul Gogyani
  */
-public class LC409 {
+public class B1353 {
     public static void main(String args[]) {
         FastReader sc = new FastReader();
-        String s = "bb";
-        System.out.println(longestPalindrome(s));
-    }
-    public static int longestPalindrome(String s) {
-        Map<Character,Integer> map = new HashMap<>();
-        for (Character c: s.toCharArray()){
-            map.putIfAbsent(c,0);
-            map.put(c,map.get(c)+1);
-        }
-        Character mid = null;
-        StringBuilder left = new StringBuilder();
-        for (Character key:map.keySet()){
-            if(map.get(key)%2==1){
-                mid = key;
-            }
-            for (int i = 0; i <map.get(key)/2 ; i++) {
-                left.append(key);
-            }
-        }
-        String right = left.reverse().toString();
+        int t = sc.nextInt();
+        while (t-- != 0) {
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            Integer a[] = new Integer[n];
+            Integer b[] = new Integer[n];
 
-        String ans = left.toString()+(mid!=null?mid:"")+right;
-        System.out.println(ans);
-        return ans.length();
+            for (int i = 0; i < n; i++) {
+                a[i] = sc.nextInt();
+            }
+
+
+            for (int i = 0; i < n; i++) {
+                b[i] = sc.nextInt();
+            }
+            Arrays.sort(a);
+            Arrays.sort(b, Collections.reverseOrder());
+            int totalsum = 0;
+            for (int i = 0; i < n; i++) {
+                if(i<k)totalsum+=Math.max(a[i],b[i]);
+                else totalsum+=a[i];
+            }
+            System.out.println(totalsum);
+
+        }
     }
 
     static class FastReader {

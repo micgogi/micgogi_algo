@@ -9,14 +9,27 @@ import java.util.StringTokenizer;
  * Rahul Gogyani
  */
 public class C1326 {
+    private static final int MOD = 998244353;
+
     public static void main(String args[]) {
         FastReader sc = new FastReader();
         int n = sc.nextInt();
         int k = sc.nextInt();
         int a[] = new int[n];
-        for (int i = 0; i < n ; i++) {
+        long sum = 0;
+        int prev = -1;
+        long ways = 1;
+        for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
+            if (a[i] > n - k) {
+                sum += a[i];
+                if (prev != -1) {
+                    ways = (ways * (i - prev)) % MOD;
+                }
+                prev = i;
+            }
         }
+        System.out.println(sum+" "+ways);
 
     }
 

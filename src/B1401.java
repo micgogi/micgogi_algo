@@ -12,16 +12,19 @@ public class B1401 {
     public static void main(String args[]) {
         FastReader sc = new FastReader();
         int t = sc.nextInt();
-        while (t--!=0){
-            int x1 = sc.nextInt();
-            int x2 = sc.nextInt();
-            int x3 = sc.nextInt();
-            int y1 = sc.nextInt();
-            int y2 = sc.nextInt();
-            int y3 = sc.nextInt();
-
-
-            int totalZero = Math.abs(x1-y1);
+        while (t-- != 0) {
+           int a[] = sc.readArray(3);
+           int b[] = sc.readArray(3);
+           int total = Math.min(a[2],b[1]);
+           a[2]-=total;
+           b[1]-=total;
+           a[0]+=a[2];
+           a[2]=0;
+           int d = Math.min(b[2],a[0]);
+           a[0]-=d;
+           b[2]-=d;
+           int sub = Math.min(b[2],a[1]);
+            System.out.println((total-sub)*2);
 
 
         }

@@ -3,6 +3,8 @@ package LCAugustChallenge;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 /**
@@ -15,7 +17,6 @@ public class LC1032 {
         char val;
         boolean isWord;
         TrieNode[] children = new TrieNode[26];
-
         public TrieNode() {
         }
 
@@ -28,6 +29,8 @@ public class LC1032 {
 
     TrieNode root = new TrieNode(' ');
     StringBuilder sb = new StringBuilder();
+
+
 
     public void constructTrie(String[] words) {
         for (String word : words) {
@@ -64,7 +67,8 @@ public class LC1032 {
 
     public static void main(String args[]) {
         FastReader sc = new FastReader();
-        //int t = sc.nextInt();
+
+               //int t = sc.nextInt();
         String words[] = {"n", "kin", "ank", "tai"};
         LC1032 lc1032 = new LC1032(words);
         System.out.println(lc1032.query('n'));

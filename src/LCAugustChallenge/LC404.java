@@ -6,7 +6,13 @@ package LCAugustChallenge;/*
  */
 
 public class LC404 {
+    private int _xyz;
     static TreeNode root;
+
+    public LC404(int xyz) {
+        _xyz = xyz;
+    }
+
     static class TreeNode{
         int data;
         TreeNode left;
@@ -23,6 +29,7 @@ public class LC404 {
         root.right.right = new TreeNode(7);
         sum(root,false);
         System.out.println(sum);
+
     }
     static int sum=0;
     public static void sum(TreeNode root, boolean check){

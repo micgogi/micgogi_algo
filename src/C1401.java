@@ -32,7 +32,6 @@ public class C1401 {
             }
             if(flag) System.out.println("No");
             else System.out.println("YES");
-
         }
     }
 

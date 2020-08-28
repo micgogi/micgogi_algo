@@ -1,3 +1,5 @@
+package LCAugustChallenge;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -5,52 +7,34 @@ import java.util.StringTokenizer;
 
 /**
  * @author Micgogi
- * on 8/25/2020  12:15 PM
+ * on 8/28/2020  4:20 PM
  * Rahul Gogyani
  */
-public class IHS2 {
+public class LC470 {
     public static void main(String args[]) {
         FastReader sc = new FastReader();
         int t = sc.nextInt();
-        while (t--!=0){
-            int n = sc.nextInt();
-            int strat = n;
-            int m = sc.nextInt();
-           if(n%2==0&&m%2==0){
-               long total =0;
-//                while (n<m){
-//                    int div = n/2;
-//                    if(div%2==1){
-//                        int newdiv =caldiv(n, div);
-//                        total+=(n/newdiv);
-//                        n = n+newdiv;
-//                    }else{
-//                        total+=(n/div);
-//                        n= n+div;
-//                    }
-//                }
-//               System.out.println(strat);
-//               System.out.println(m);
-//               System.out.println(n);
-//               System.out.println(total+(n-m));
-           }else{
-               System.out.println(-1);
-           }
-
-        }
-
+        
     }
 
-    public static int
-
-    private static int caldiv(int n, int div) {
-        for (int i = div -1; i >=2 ; i-=2) {
-            if(n %i==0){
-                return i;
-            }
+    /**
+     * The rand7() API is already defined in the parent class SolBase.
+     * public int rand7();
+     *
+     * @return a random integer in the range 1 to 7
+     */
+    public static int rand10() {
+        int random = 40;
+        while (random >= 40) {
+            random = 7 * (rand7() - 1) + (rand7() - 1);
         }
-        return 1;
+        return random % 10 + 1;
     }
+
+    private static int rand7() {
+        return 0;
+    }
+
 
     static class FastReader {
         BufferedReader br;

@@ -15,6 +15,7 @@ public class IHS1 {
         int time = 1;
         HashMap<Integer, Integer> map = new HashMap<>();
         PriorityQueue<Integer> pq = new PriorityQueue();
+        PriorityQueue<Integer> pq1 = new PriorityQueue<>((a,b)->Integer.compare(b,a));
         ArrayList<Long> list = new ArrayList<>();
         while (t-- != 0) {
             int q = sc.nextInt();
@@ -22,14 +23,23 @@ public class IHS1 {
             if(q==1){
                 map.put(time, n);
                 pq.add(n);
+                pq1.add(n);
                 time++;
             }else if(q==2){
                 int val = map.remove(n);
                 pq.remove(val);
+                pq1.remove(val);
             }else{
                 int val = pq.peek();
-                long dist = Math.abs((long)val-n);
-                list.add(dist);
+                int val2 = pq1.peek();
+                System.out.println(val);
+                System.out.println(val2);
+                long dist =Math.abs(val-n);
+                long dist2 = Math.abs(val2-n);
+
+
+                System.out.println();
+                list.add(Math.max(dist,dist2));
             }
 
         }

@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * @author Micgogi
@@ -12,12 +12,24 @@ public class IHS2 {
     public static void main(String args[]) {
         FastReader sc = new FastReader();
         int t = sc.nextInt();
-        while (t--!=0){
+        //  System.out.println(calFactor(t));
+        while (t-- != 0) {
             int n = sc.nextInt();
-            int strat = n;
             int m = sc.nextInt();
-           if(n%2==0&&m%2==0){
-               long total =0;
+            int op = path(n,m);
+            if(op>=INF){
+                System.out.println(-1);
+            }else{
+                System.out.println(op);
+            }
+
+        }
+//        while (t--!=0){
+//            int n = sc.nextInt();
+//            int strat = n;
+//            int m = sc.nextInt();
+//           if(n%2==0&&m%2==0){
+//               long total =0;
 //                while (n<m){
 //                    int div = n/2;
 //                    if(div%2==1){
@@ -33,19 +45,42 @@ public class IHS2 {
 //               System.out.println(m);
 //               System.out.println(n);
 //               System.out.println(total+(n-m));
-           }else{
-               System.out.println(-1);
-           }
-
-        }
+//           }else{
+//               System.out.println(-1);
+//           }
+//
+//        }
 
     }
 
-    public static int
+    final static int INF = (int) 1e7;
+
+
+    public static int path(int cur, int m) {
+        if (cur > m)
+            return INF;
+        if (cur == m) {
+            return 0;
+        }
+        int op = INF;
+        for (int i = 2; i * i <= cur; i++) {
+            if (cur % i == 0) {
+                if (i % 2 == 0) {
+                    op = Math.min(op, cur/i + path(cur + i, m));
+                }
+                if ((cur / i) != i && (cur / i) % 2 == 0) {
+                    op = Math.min(op, cur/i + path(cur + (cur / i), m));
+                }
+            }
+        }
+        return op;
+
+    }
+
 
     private static int caldiv(int n, int div) {
-        for (int i = div -1; i >=2 ; i-=2) {
-            if(n %i==0){
+        for (int i = div - 1; i >= 2; i -= 2) {
+            if (n % i == 0) {
                 return i;
             }
         }

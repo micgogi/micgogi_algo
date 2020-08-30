@@ -36,26 +36,34 @@ import java.util.*;
 //}
 
 
-
 class Test {
-    int getValue(){
+    int getValue() {
         int returnValue = 10;
-        try{
-            String[] Languages = {"Java","Ruby"};
+        try {
+            String[] Languages = {"Java", "Ruby"};
             System.out.println(Languages[5]);
-        }catch (Exception e){
-            System.out.println("Catch Block"+returnValue);
+        } catch (Exception e) {
+            System.out.println("Catch Block" + returnValue);
             return returnValue;
-        }finally {
-            returnValue+=10;
-            System.out.println("Finally"+returnValue);
+        } finally {
+            returnValue += 10;
+            System.out.println("Finally" + returnValue);
 
         }
         return returnValue;
     }
+
     public static void main(String[] args) {
-    Test test = new Test();
-        System.out.println(test.getValue());
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                System.out.println(i);
+                if (i != n / i) {
+                    System.out.println(n / i);
+                }
+            }
+        }
 //        A a = new A();
 //        a.calc(2,3);
 //        System.out.println(a.x+" "+a.y);
@@ -145,7 +153,6 @@ class Test {
 //
 //    }
     // null 2 2
-
 
 
 }

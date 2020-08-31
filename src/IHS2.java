@@ -16,12 +16,24 @@ public class IHS2 {
         while (t-- != 0) {
             int n = sc.nextInt();
             int m = sc.nextInt();
-            int op = path(n,m);
-            if(op>=INF){
+            int[] dp = new int[INF];
+            for (int i = n; i <=m ; i++) {
+                dp[i] = -1;
+            }
+            //usingdp
+            int op = pathOptimized(n, m,dp);
+
+            if (op >= INF) {
                 System.out.println(-1);
-            }else{
+            } else {
                 System.out.println(op);
             }
+//            int op1 = path(n,m);
+//            if (op1 >= INF) {
+//                System.out.println(-1);
+//            } else {
+//                System.out.println(op1);
+//            }
 
         }
 //        while (t--!=0){
@@ -53,9 +65,37 @@ public class IHS2 {
 
     }
 
-    final static int INF = (int) 1e7;
+    final static int INF = 100007;
+
+    //optimized O(n*sqrt(n))
 
 
+
+    public static int pathOptimized(int cur, int m, int[] dp) {
+        if (cur > m) {
+            return INF;
+        }
+        if (cur == m) {
+            return 0;
+        }
+        if (dp[cur] != -1) {
+            return dp[cur];
+        }
+        int op = INF;
+        for (int i = 2; i * i <= cur; i++) {
+            if (cur % i == 0) {
+                if (i % 2 == 0) {
+                    op = Math.min(op, cur / i + pathOptimized(cur + i, m,dp));
+                }
+                if ((cur / i) != i && (cur / i) % 2 == 0) {
+                    op = Math.min(op, cur / (cur / i) + pathOptimized(cur + (cur / i), m,dp));
+                }
+            }
+        }
+        return dp[cur] = op;
+    }
+
+    //O(2^n)
     public static int path(int cur, int m) {
         if (cur > m)
             return INF;
@@ -66,10 +106,10 @@ public class IHS2 {
         for (int i = 2; i * i <= cur; i++) {
             if (cur % i == 0) {
                 if (i % 2 == 0) {
-                    op = Math.min(op, cur/i + path(cur + i, m));
+                    op = Math.min(op, cur / i + path(cur + i, m));
                 }
                 if ((cur / i) != i && (cur / i) % 2 == 0) {
-                    op = Math.min(op, cur/i + path(cur + (cur / i), m));
+                    op = Math.min(op, cur / (cur / i) + path(cur + (cur / i), m));
                 }
             }
         }

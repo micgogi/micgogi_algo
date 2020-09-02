@@ -35,35 +35,57 @@ import java.util.*;
 //        }
 //}
 
-
-class Test {
-    int getValue() {
-        int returnValue = 10;
-        try {
-            String[] Languages = {"Java", "Ruby"};
-            System.out.println(Languages[5]);
-        } catch (Exception e) {
-            System.out.println("Catch Block" + returnValue);
-            return returnValue;
-        } finally {
-            returnValue += 10;
-            System.out.println("Finally" + returnValue);
-
-        }
-        return returnValue;
+class MyEmployee{
+    int id;
+    String name;
+    public MyEmployee(int id, String namr){
+        this.id = id;
+        this.name = namr;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyEmployee that = (MyEmployee) o;
+        return id == that.id &&
+                Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id,name);
+    }
+}
+class Test {
+//    int getValue() {
+//        int returnValue = 10;
+//        try {
+//            String[] Languages = {"Java", "Ruby"};
+//            System.out.println(Languages[5]);
+//        } catch (Exception e) {
+//            System.out.println("Catch Block" + returnValue);
+//            return returnValue;
+//        } finally {
+//            returnValue += 10;
+//            System.out.println("Finally" + returnValue);
+//
+//        }
+//        return returnValue;
+//    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 2; i * i <= n; i++) {
-            if (n % i == 0) {
-                System.out.println(i);
-                if (i != n / i) {
-                    System.out.println(n / i);
-                }
-            }
-        }
+
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        for (int i = 2; i * i <= n; i++) {
+//            if (n % i == 0) {
+//                System.out.println(i);
+//                if (i != n / i) {
+//                    System.out.println(n / i);
+//                }
+//            }
+//        }
 //        A a = new A();
 //        a.calc(2,3);
 //        System.out.println(a.x+" "+a.y);

@@ -1,5 +1,8 @@
+import com.sun.org.apache.xerces.internal.util.SymbolTable;
+
 import java.lang.annotation.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author Micgogi
@@ -35,28 +38,6 @@ import java.util.*;
 //        }
 //}
 
-class MyEmployee{
-    int id;
-    String name;
-    public MyEmployee(int id, String namr){
-        this.id = id;
-        this.name = namr;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        MyEmployee that = (MyEmployee) o;
-        return id == that.id &&
-                Objects.equals(name, that.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id,name);
-    }
-}
 class Test {
 //    int getValue() {
 //        int returnValue = 10;
@@ -75,6 +56,21 @@ class Test {
 //    }
 
     public static void main(String[] args) {
+        
+
+
+//        list.add(10);
+//        list.add(20);
+//        list.add(1);
+//
+//        Iterator itr = list.iterator();
+//        while (itr.hasNext()){
+//            int x = (Integer)itr.next();
+//            if (x < 10)
+//                itr.remove();
+//        }
+//
+//        System.out.println(list);
 
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();

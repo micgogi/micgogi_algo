@@ -2,6 +2,7 @@ import com.sun.org.apache.xerces.internal.util.SymbolTable;
 
 import java.lang.annotation.*;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 /**
@@ -39,7 +40,7 @@ import java.util.stream.Collectors;
 //}
 
 class Test {
-//    int getValue() {
+    //    int getValue() {
 //        int returnValue = 10;
 //        try {
 //            String[] Languages = {"Java", "Ruby"};
@@ -54,10 +55,18 @@ class Test {
 //        }
 //        return returnValue;
 //    }
+    static Object monitor = new Object();
+    static AtomicInteger atomicInteger = new AtomicInteger(1);
 
     public static void main(String[] args) {
-        
 
+        Test test = new Test();
+        Thread thread1 = new Thread(new Test.Printer(0, 3));
+        Thread thread2 = new Thread(new Test.Printer(1, 3));
+        Thread thread3 = new Thread(new Test.Printer(2, 3));
+        thread1.start();
+        thread2.start();
+        thread3.start();
 
 //        list.add(10);
 //        list.add(20);
@@ -134,6 +143,35 @@ class Test {
 //        compare("Java@Program",regex);
 
 
+    }
+
+    static class Printer implements Runnable {
+        int threadId;
+        int numOfthread;
+
+        public Printer(int id, int numOfthread) {
+            this.threadId = id;
+            this.numOfthread = numOfthread;
+        }
+
+        @Override
+        public void run() {
+            try {
+                while (true&&atomicInteger.get()!=101) {
+                    Thread.sleep(100);
+                    synchronized (monitor) {
+                        if (atomicInteger.get() % numOfthread != threadId) {
+                            monitor.wait();
+                        } else {
+                            System.out.println("Thread ID:" + threadId + " " + atomicInteger.getAndIncrement());
+                            monitor.notifyAll();
+                        }
+                    }
+                }
+            } catch (InterruptedException e) {
+
+            }
+        }
     }
 //    public static void compare(String str, String reg){
 //        if(str.matches(reg)){

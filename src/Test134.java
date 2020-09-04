@@ -6,8 +6,10 @@
 public class Test134  {
 
     public static void main(String[] args) {
-        int a[] = {5,5,10,100,10,5};
-        System.out.println(findMaxSum(a));
+       String s = "ABAACDD";
+
+
+
     }
     static int findMaxSum(int a[]){
         int incl = a[0];
@@ -18,8 +20,10 @@ public class Test134  {
             incl=excl+a[i];
             excl = excl_new;
         }
+
         return (incl>excl)?incl:excl;
     }
 }
+
 
 

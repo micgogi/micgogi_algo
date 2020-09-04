@@ -157,8 +157,8 @@ class Test {
         @Override
         public void run() {
             try {
-                while (true&&atomicInteger.get()!=101) {
-                    Thread.sleep(100);
+                while (atomicInteger.get()<=100) {
+//                    Thread.sleep(100);
                     synchronized (monitor) {
                         if (atomicInteger.get() % numOfthread != threadId) {
                             monitor.wait();

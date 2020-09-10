@@ -40,20 +40,39 @@ public class TESTTECH {
 //        System.out.println(maxSum(a,0,a.length));
 //        int a[] = {1, 2, 3, 6, 6, 6};
 //        System.out.println(subarraysumequaltok(a, 6));
-        int a[] = {4,5,0,-2,-3,1};
-        int k =  5;
-        System.out.println(subarraysumdivisblebyk(a,5));
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,8);
-        List<Integer> outputList = new ArrayList<>();
-        int size = list.size();
-        for (int i = 0; i <size-1 ; i+=2) {
-            outputList.add(list.get(i)+list.get(i+1));
-        }
-       
-        System.out.println(outputList);
+//        int a[] = {4,5,0,-2,-3,1};
+//        int k =  5;
+//        System.out.println(subarraysumdivisblebyk(a,5));
+//        List<Integer> list = Arrays.asList(1,2,3,4,5,6,8);
+//        List<Integer> outputList = new ArrayList<>();
+//        int size = list.size();
+//        for (int i = 0; i <size-1 ; i+=2) {
+//            outputList.add(list.get(i)+list.get(i+1));
+//        }
+//
+//        System.out.println(outputList);
+        int a[] = {1,2,2};
+        System.out.println(subsets(a));
+
 
 
     }
+    private static List<List<Integer>> subsets(int a[]){
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(a);
+        backtrack(result,new ArrayList<Integer>(),a,0);
+        return result;
+    }
+
+    private static void backtrack(List<List<Integer>> result, ArrayList<Integer> templIst, int[] a, int start) {
+        result.add(new ArrayList<>(templIst));
+        for (int i = start; i <a.length ; i++) {
+            templIst.add(a[i]);
+            backtrack(result,templIst,a,i+1);
+            templIst.remove(templIst.size()-1);
+        }
+    }
+
 
     static int dp[] = new int[10];
     static boolean[] visited = new boolean[10];

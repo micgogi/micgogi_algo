@@ -1,5 +1,8 @@
 package LCSeptChallenge;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author Micgogi
  * on 6/4/2020  9:04 AM
@@ -16,5 +19,6 @@ public class LC198 {
         }
 
         System.out.println(dp[a.length]);
+        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 }

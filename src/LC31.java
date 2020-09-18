@@ -16,6 +16,7 @@ public class LC31 {
 
     }
 
+    
     public static void nextPermutation(int[] nums) {
         int n = nums.length;
         int k, l;

@@ -17,8 +17,8 @@ public class LC179 {
         }
         Arrays.sort(st, (s1, s2) -> (s2 + s1).compareTo(s1 + s2));
         StringBuilder sb = new StringBuilder();
-        for (int i = nums.length-1;i>=0;i--){
-            sb.append(nums[i]);
+        for (String num: st){
+            sb.append(num);
         }
         if(sb.charAt(0)=='0'){
             System.out.println(0);

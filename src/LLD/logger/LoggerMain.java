@@ -13,17 +13,19 @@ import java.util.StringTokenizer;
 public class LoggerMain {
     public static void main(String args[]) {
         final LogClient logger = new LoggerClientImplementation();
-        logger.start("1");
+        logger.start("1", 1);
         logger.poll();
-        logger.start("3");
+        logger.start("3", 2);
         logger.poll();
         logger.end("1");
         logger.poll();
-        logger.start("2");
+        logger.start("2", 3);
         logger.poll();
         logger.end("2");
         logger.poll();
         logger.end("3");
+        logger.poll();
+        logger.poll();
         logger.poll();
 
     }

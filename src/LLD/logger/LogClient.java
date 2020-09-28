@@ -1,5 +1,7 @@
 package LLD.logger;
 
+import java.util.concurrent.ExecutionException;
+
 /**
  * @author Micgogi
  * on 9/27/2020  4:29 PM
@@ -10,7 +12,7 @@ public interface LogClient {
     /**
      * When a process starts, it calls 'start' with processId.
      */
-    void start(String processId);
+    void start(String processId, long timestamp);
     /**
      * When the same process ends, it calls 'end' with processId.
      */
@@ -27,6 +29,6 @@ public interface LogClient {
      * {2} started at {8} and ended at {12}
      * {1} started at {12} and ended at {15}
      */
-    void poll();
+    String poll() ;
 }
 

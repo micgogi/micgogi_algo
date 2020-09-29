@@ -1,4 +1,3 @@
-import com.sun.java.swing.plaf.windows.WindowsTextAreaUI;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

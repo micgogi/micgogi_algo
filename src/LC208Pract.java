@@ -1,5 +1,3 @@
-import com.sun.org.apache.xml.internal.utils.Trie;
-import javafx.scene.transform.Scale;
 
 import java.io.BufferedReader;
 import java.io.IOException;

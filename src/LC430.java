@@ -1,4 +1,3 @@
-import jdk.internal.org.objectweb.asm.util.CheckAnnotationAdapter;
 
 import javax.swing.plaf.basic.BasicComboBoxUI;
 

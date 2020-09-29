@@ -1,4 +1,3 @@
-import com.sun.org.apache.xerces.internal.util.SymbolTable;
 
 import java.lang.annotation.*;
 import java.util.*;

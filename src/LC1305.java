@@ -1,4 +1,3 @@
-import sun.plugin2.applet.context.NoopExecutionContext;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,3 @@
-import com.sun.prism.shader.Solid_TextureFirstPassLCD_AlphaTest_Loader;
 
 import java.util.Arrays;
 

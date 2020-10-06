@@ -1,9 +1,10 @@
-/*
+package LCOctChallenge;/*
  *@author Rahul Gogyani
 
  *
  * 11:37 AM 3/12/2020
  */
+
 
 
 public class LC701 {

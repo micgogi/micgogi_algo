@@ -46,7 +46,7 @@ public class SG4 {
                 }
 
                 for (int i = 1; i <count.length ; i++) {
-                    System.out.println(count[1]+" ");
+                    System.out.print(count[i]+" ");
                 }
                 System.out.println();
             }

@@ -4,9 +4,6 @@
  * 2:41 PM 2/7/2020
  */
 
-import javafx.geometry.Pos;
-
-import java.util.Arrays;
 
 public class NQueenProblem {
     static class Position{

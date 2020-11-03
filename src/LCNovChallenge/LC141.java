@@ -1,5 +1,5 @@
 package LCNovChallenge;/*
- *@author Ragul Gogyani
+ *@author Rahul Gogyani
 
  *
  * 1:17 PM 3/6/2020
@@ -14,25 +14,32 @@ public class LC141 {
             this.data = data;
         }
     }
-    public static void main(String[] args) {
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next=head;
-        System.out.println(cycle(head));
-    }
+    /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
 
-    public static boolean cycle(Node temp){
-        Node slow = temp;
-        Node fast = temp;
-        while(slow!=null&fast!=null&& fast.next!=null){
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow==fast){
-               return true;
+    public ListNode insertionSortList(ListNode head) {
+        if(head==null||head.next==null)return head;
+         ListNode cur = head;
+        ListNode next = cur.next;
+        while(cur!=null){
+            next = cur.next;
+            while(next!=null){
+                if(cur.val>next.val){
+                    int temp = cur.val;
+                    cur.val = next.val;
+                    next.val = temp;
+                }
+                next = next.next;
             }
+            cur=cur.next;
         }
-        return false;
-    }
+        return head;
+    
+}
 }

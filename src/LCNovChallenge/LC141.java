@@ -14,14 +14,14 @@ public class LC141 {
             this.data = data;
         }
     }
-    /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
+
+ // Definition for singly-linked list.
+  public class ListNode {
+      int val;
+      ListNode next;
+      ListNode(int x) { val = x; }
+  }
+
 
     public ListNode insertionSortList(ListNode head) {
         if(head==null||head.next==null)return head;

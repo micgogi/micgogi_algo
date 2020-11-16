@@ -33,7 +33,7 @@
 3-> [YT](https://www.youtube.com/playlist?list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)  
 4-> [SD Interview](https://www.youtube.com/watch?v=q0KGYwNbf-0)
 
-##### Netwoking  
+##### Networking  
 1-> [WS](https://hpbn.co/)  
 
 

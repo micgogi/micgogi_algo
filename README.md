@@ -1,4 +1,3 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/micgogi/micgogi_algo?style=plastic)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/micgogi/micgogi_algo?style=plastic)
 [![Issues](https://img.shields.io/github/issues/afrozchakure/Competitive-Programming-Solutions)](https://github.com/afrozchakure/Competitive-Programming-Solutions/issues)
 [![Open PRs](https://img.shields.io/github/issues-pr-raw/micgogi/micgogi_algo)](https://github.com/micgogi/micgogi_algo/pulls)

@@ -1,4 +1,4 @@
-class LC1552 {
+class LC1551 {
     public static void main(String[] args){
       int n = 6;
       System.out.println(minOperations(n));

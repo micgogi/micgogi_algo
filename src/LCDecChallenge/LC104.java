@@ -1,3 +1,5 @@
+package LCDecChallenge;
+
 public class LC104 {
 
     static TreeNode root;

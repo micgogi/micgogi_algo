@@ -1,3 +1,5 @@
+package LCDecChallenge;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,3 +1,4 @@
+package LCDecChallenge;
 import java.util.Arrays;
 
 /**

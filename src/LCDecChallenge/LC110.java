@@ -1,4 +1,4 @@
-
+package LCDecChallenge;
 
 /**
  * @author Micgogi
@@ -50,4 +50,5 @@ public class LC110 {
 
     }
 }
+
 

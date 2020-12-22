@@ -45,7 +45,7 @@ public class LC110 {
         if (left - right < -1 || left - right > 1) {
             return -1;
         }
-        return 1 + Math.max(height(root.left), height(root.right));
+        return 1 + Math.max(left,right);
 
 
     }

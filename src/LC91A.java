@@ -3,7 +3,7 @@
  * on 4/17/2020  12:56 PM
  * Rahul Gogyani
  */
-public class LC91 {
+public class LC91A {
     public static void main(String[] args) {
         String s ="12";
         int dp[] = new int[s.length()+1];

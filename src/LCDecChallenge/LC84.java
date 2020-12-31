@@ -1,3 +1,5 @@
+package LCDecChallenge;
+
 import java.util.Stack;
 
 /**

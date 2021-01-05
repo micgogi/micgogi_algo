@@ -1,4 +1,4 @@
-
+package LCJan21Challenge;
 
 /**
  * @author Micgogi

@@ -16,11 +16,10 @@ public class LC1539 {
             if (arr[i] != j) {
                 count++;
                 if (count == k) return j;
-                j++;
             } else {
                 i++;
-                j++;
             }
+            j++;
         }
         return arr.length + k;
     }

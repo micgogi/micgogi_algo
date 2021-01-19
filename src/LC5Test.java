@@ -1,8 +1,3 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
 /**
  * @author Micgogi
  * on 9/6/2020  12:07 PM
@@ -10,10 +5,10 @@ import java.util.StringTokenizer;
  */
 public class LC5Test {
     public static void main(String args[]) {
-
+        System.out.println(longestPalindrome("shggfsggg"));
     }
 
-    public String longestPalindrome(String s) {
+    public static String longestPalindrome(String s) {
         if(s==null||s.length()<1)return "";
         int start = 0;
         int end = 0;

@@ -35,10 +35,7 @@
 ##### SLIDING WINDOW  
 1-> [SLIDING WINDOW](https://leetcode.com/discuss/general-discussion/657507/sliding-window-for-beginners-problems-template-sample-solutions)
 ##### System Design  
-1-> [Github Link](https://github.com/donnemartin/system-design-primer)  
-2-> [Github](https://github.com/binhnguyennus/awesome-scalability)  
-3-> [YT](https://www.youtube.com/playlist?list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)  
-4-> [SD Interview](https://www.youtube.com/watch?v=q0KGYwNbf-0)
+1->[Links](https://docs.google.com/document/d/124JrpRlEezDJ_imdMPvLYXS28yRZ0h_4lvzvQn5UynY/edit?usp=sharing)
 
 ##### Networking  
 1-> [WS](https://hpbn.co/)  

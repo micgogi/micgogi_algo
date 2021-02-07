@@ -1,7 +1,5 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+package LCJan21Challenge;
 import java.util.Arrays;
-import java.util.StringTokenizer;
 
 /**
  * @author Micgogi

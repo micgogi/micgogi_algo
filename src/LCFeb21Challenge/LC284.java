@@ -32,7 +32,7 @@ public class LC284 {
 
     public Integer next() {
         Integer value = nextElement;
-        if(iterator.hasNext())this.nextElement = value;
+        if(iterator.hasNext())this.nextElement = iterator.next();
         else this.nextElement = null;
         return value;
     }

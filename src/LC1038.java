@@ -1,45 +1,78 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 
 /**
  * @author Micgogi
- * on 2/8/2021  8:28 PM
+ * on 2/9/2021  5:56 PM
  * Rahul Gogyani
  */
-public class LC284 {
-    Integer nextElement;
-    Iterator<Integer> iterator;
+public class LC1038 {
+    static TreeNode root;
+
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        public TreeNode(int data) {
+            this.val = data;
+        }
+    }
+
     public static void main(String args[]) {
-    }
-    public LC284(Iterator<Integer> iterator) {
-        // initialize any member here.
-        this.iterator = iterator;
-        nextElement = iterator.next();
-    }
+        root = new TreeNode(4);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(0);
+        root.left.right = new TreeNode(2);
+        root.left.right.right = new TreeNode(3);
+        root.right.left = new TreeNode(5);
+        root.right.right = new TreeNode(7);
+        root.right.right.right = new TreeNode(8);
+        calculateSum(root);
+        System.out.println(sum);
+        printInorder(bstToGst(root));
 
-    // Returns the next element in the iteration without advancing the iterator.
-    public Integer peek() {
-        return nextElement;
-    }
 
-    // hasNext() and next() should behave the same as in the Iterator interface.
-    // Override them if needed.
 
-    public Integer next() {
-        Integer value = nextElement;
-        if(iterator.hasNext())this.nextElement = iterator.next();
-        else this.nextElement = null;
-        return value;
     }
 
+    static int sum = 0;
 
-    public boolean hasNext() {
-        return nextElement!=null;
+    public static void calculateSum(TreeNode root) {
+        if (root != null) {
+            sum += root.val;
+            calculateSum(root.left);
+            calculateSum(root.right);
+        }
     }
 
+    public static TreeNode bstToGst(TreeNode root) {
+        inorder(root);
+        return root;
+
+    }
+
+    public static void inorder(TreeNode root) {
+        if (root != null) {
+            inorder(root.left);
+            int temp = root.val;
+
+            root.val = sum;
+            sum -= temp;
+            inorder(root.right);
+        }
+    }
+
+    public static void printInorder(TreeNode root){
+        if(root!=null){
+            printInorder(root.left);
+            System.out.println(root.val);
+            printInorder(root.right);
+        }
+    }
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;

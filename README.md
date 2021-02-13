@@ -21,24 +21,6 @@
 [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)  
 
 
-## Important Links  
-##### Algo and DS   
-
-1-> [LC POST](https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide)   
-2-> [DS](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)  
-
-##### DP  
-1-> [LC POST](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)  
-2-> [DP PROBLEMS](https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions)
-##### GRAPH  
-1-> [GRAPH PROBLEMS](https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions)  
-##### SLIDING WINDOW  
-1-> [SLIDING WINDOW](https://leetcode.com/discuss/general-discussion/657507/sliding-window-for-beginners-problems-template-sample-solutions)
-##### System Design  
-1->[Links](https://docs.google.com/document/d/124JrpRlEezDJ_imdMPvLYXS28yRZ0h_4lvzvQn5UynY/edit?usp=sharing)
-
-##### Networking  
-1-> [WS](https://hpbn.co/)  
 
 
 

@@ -17,7 +17,6 @@
 [Permutation]( https://leetcode.com/problems/permutations/)  
 [Permutations II]( https://leetcode.com/problems/permutations-ii/)  
 [Combination Sum]( https://leetcode.com/problems/combination-sum/)  
-[Combination Sum II]( https://leetcode.com/problems/combination-sum-ii/)  
 
 
 

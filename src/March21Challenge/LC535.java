@@ -37,7 +37,6 @@ public class LC535 {
         }
         longtoShort.put(longUrl, base + enc);
         shortToLong.put(base + enc, longUrl);
-
         return base + enc;
     }
 

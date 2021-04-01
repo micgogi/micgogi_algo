@@ -1,47 +1,42 @@
-package March21Challenge;
+package LCMarch21Challenge;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 /**
  * @author Micgogi
- * on 3/19/2021  3:23 PM
+ * on 3/17/2021  8:11 PM
  * Rahul Gogyani
  */
-public class LC841 {
+public class LC478 {
     public static void main(String args[]) {
-        FastReader sc = new FastReader();
-
-        List<List<Integer>> rooms = new ArrayList<>();
-        rooms.add(new ArrayList<>(Arrays.asList(1,3)));
-        rooms.add(new ArrayList<>(Arrays.asList(3,0,1)));
-        rooms.add(new ArrayList<>(Arrays.asList(2)));
-        rooms.add(new ArrayList<>(Arrays.asList(0)));
-
-        System.out.println(canVisitAllRooms(rooms));
+        LC478 lc478 = new LC478(1, 0, 0);
+        System.out.println(Arrays.toString(lc478.randPoint()));
+        System.out.println(Arrays.toString(lc478.randPoint()));
+        System.out.println(Arrays.toString(lc478.randPoint()));
+        System.out.println(Arrays.toString(lc478.randPoint()));
     }
 
-    public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        boolean[] check = new boolean[rooms.size()];
-        check[0] = true;
-        Stack<Integer> stack = new Stack<>();
-        stack.push(0);
+    double rad;
+    double x;
+    double y;
 
-        while (!stack.isEmpty()) {
-            int k = stack.pop();
-            for (Integer key : rooms.get(k)) {
-                if (!check[key]) {
-                    check[key] = true;
-                    stack.push(key);
-                }
-            }
-        }
-        for (boolean c : check) {
-            if (!c) return false;
-        }
-        return true;
+
+    public LC478(double radius, double x_center, double y_center) {
+        this.rad = radius;
+        this.x = x_center;
+        this.y = y_center;
+
+    }
+
+    public double[] randPoint() {
+
+        double r = rad * Math.sqrt(Math.random());
+        double theta = Math.random()*2*Math.PI;
+        return new double[]{x + r * Math.cos(theta), y + r * Math.sin(theta)};
     }
 
     static class FastReader {

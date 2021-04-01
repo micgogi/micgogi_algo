@@ -1,73 +1,47 @@
-package March21Challenge;
+package LCMarch21Challenge;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * @author Micgogi
- * on 3/9/2021  7:35 PM
+ * on 3/19/2021  3:23 PM
  * Rahul Gogyani
  */
-public class LC623 {
-    static TreeNode root;
-
-    static class TreeNode {
-        int data;
-        TreeNode left;
-        TreeNode right;
-
-        public TreeNode(int data) {
-            this.data = data;
-        }
-    }
-
+public class LC841 {
     public static void main(String args[]) {
-        root = new TreeNode(4);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(6);
-        root.left.left = new TreeNode(3);
-        root.left.right = new TreeNode(1);
-        root.right.left = new TreeNode(5);
-        int v = 1;
-        int d = 2;
-        addOneRow(root, v, d);
-        printTree(root);
+        FastReader sc = new FastReader();
 
+        List<List<Integer>> rooms = new ArrayList<>();
+        rooms.add(new ArrayList<>(Arrays.asList(1,3)));
+        rooms.add(new ArrayList<>(Arrays.asList(3,0,1)));
+        rooms.add(new ArrayList<>(Arrays.asList(2)));
+        rooms.add(new ArrayList<>(Arrays.asList(0)));
+
+        System.out.println(canVisitAllRooms(rooms));
     }
 
-    public static void printTree(TreeNode root) {
-        if (root != null) {
-            System.out.println(root.data);
-            printTree(root.left);
-            printTree(root.right);
-        }
-    }
+    public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
+        boolean[] check = new boolean[rooms.size()];
+        check[0] = true;
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);
 
-    public static TreeNode addOneRow(TreeNode root, int v, int d) {
-        if (d == 1) {
-            TreeNode newNode = new TreeNode(v);
-            newNode.left = root;
-            return newNode;
+        while (!stack.isEmpty()) {
+            int k = stack.pop();
+            for (Integer key : rooms.get(k)) {
+                if (!check[key]) {
+                    check[key] = true;
+                    stack.push(key);
+                }
+            }
         }
-        dfs(root, 1, v, d);
-        return root;
-    }
-
-    public static void dfs(TreeNode root, int depth, int v, int d) {
-        if (root == null) return;
-        if (depth == d - 1) {
-            TreeNode temp = root.left;
-            root.left = new TreeNode(v);
-            root.left.left = temp;
-            TreeNode temp1 = root.right;
-            root.right = new TreeNode(v);
-            root.right.right = temp1;
-        } else {
-            dfs(root.left, depth + 1, v, d);
-            dfs(root.right, depth + 1, v, d);
+        for (boolean c : check) {
+            if (!c) return false;
         }
+        return true;
     }
 
     static class FastReader {

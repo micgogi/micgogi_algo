@@ -1,4 +1,4 @@
-package March21Challenge;
+package LCMarch21Challenge;
 
 import java.util.Arrays;
 import java.util.HashSet;

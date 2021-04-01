@@ -1,4 +1,4 @@
-package March21Challenge;
+package LCMarch21Challenge;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,35 +8,24 @@ import java.util.StringTokenizer;
 
 /**
  * @author Micgogi
- * on 3/17/2021  8:11 PM
+ * on 3/11/2021  2:42 PM
  * Rahul Gogyani
  */
-public class LC478 {
+public class LC322 {
     public static void main(String args[]) {
-        LC478 lc478 = new LC478(1, 0, 0);
-        System.out.println(Arrays.toString(lc478.randPoint()));
-        System.out.println(Arrays.toString(lc478.randPoint()));
-        System.out.println(Arrays.toString(lc478.randPoint()));
-        System.out.println(Arrays.toString(lc478.randPoint()));
-    }
-
-    double rad;
-    double x;
-    double y;
-
-
-    public LC478(double radius, double x_center, double y_center) {
-        this.rad = radius;
-        this.x = x_center;
-        this.y = y_center;
-
-    }
-
-    public double[] randPoint() {
-
-        double r = rad * Math.sqrt(Math.random());
-        double theta = Math.random()*2*Math.PI;
-        return new double[]{x + r * Math.cos(theta), y + r * Math.sin(theta)};
+        int coins[] = {1, 2, 5};
+        int amount = 11;
+        int dp[] = new int[amount + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++) {
+            for (int coin : coins) {
+                if (i >= coin && dp[i - coin] != Integer.MAX_VALUE) {
+                    dp[i] = Math.max(dp[i - coin] + 1, dp[i]);
+                }
+            }
+        }
+        System.out.println(dp[amount] != Integer.MAX_VALUE ? -1 : dp[amount]);
     }
 
     static class FastReader {

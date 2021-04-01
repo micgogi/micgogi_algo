@@ -1,31 +1,73 @@
-package March21Challenge;
+package LCMarch21Challenge;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
  * @author Micgogi
- * on 3/11/2021  2:42 PM
+ * on 3/9/2021  7:35 PM
  * Rahul Gogyani
  */
-public class LC322 {
-    public static void main(String args[]) {
-        int coins[] = {1, 2, 5};
-        int amount = 11;
-        int dp[] = new int[amount + 1];
-        Arrays.fill(dp, Integer.MAX_VALUE);
-        dp[0] = 0;
-        for (int i = 1; i <= amount; i++) {
-            for (int coin : coins) {
-                if (i >= coin && dp[i - coin] != Integer.MAX_VALUE) {
-                    dp[i] = Math.max(dp[i - coin] + 1, dp[i]);
-                }
-            }
+public class LC623 {
+    static TreeNode root;
+
+    static class TreeNode {
+        int data;
+        TreeNode left;
+        TreeNode right;
+
+        public TreeNode(int data) {
+            this.data = data;
         }
-        System.out.println(dp[amount] != Integer.MAX_VALUE ? -1 : dp[amount]);
+    }
+
+    public static void main(String args[]) {
+        root = new TreeNode(4);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(1);
+        root.right.left = new TreeNode(5);
+        int v = 1;
+        int d = 2;
+        addOneRow(root, v, d);
+        printTree(root);
+
+    }
+
+    public static void printTree(TreeNode root) {
+        if (root != null) {
+            System.out.println(root.data);
+            printTree(root.left);
+            printTree(root.right);
+        }
+    }
+
+    public static TreeNode addOneRow(TreeNode root, int v, int d) {
+        if (d == 1) {
+            TreeNode newNode = new TreeNode(v);
+            newNode.left = root;
+            return newNode;
+        }
+        dfs(root, 1, v, d);
+        return root;
+    }
+
+    public static void dfs(TreeNode root, int depth, int v, int d) {
+        if (root == null) return;
+        if (depth == d - 1) {
+            TreeNode temp = root.left;
+            root.left = new TreeNode(v);
+            root.left.left = temp;
+            TreeNode temp1 = root.right;
+            root.right = new TreeNode(v);
+            root.right.right = temp1;
+        } else {
+            dfs(root.left, depth + 1, v, d);
+            dfs(root.right, depth + 1, v, d);
+        }
     }
 
     static class FastReader {

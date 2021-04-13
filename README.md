@@ -9,14 +9,7 @@
 
 
 
-
-##### Back Tracking problems  
-[A-general-approach-to-backtracking-questions](https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning))  
-[Subset Problem]( https://leetcode.com/problems/subsets/)  
-[Subset II]( https://leetcode.com/problems/subsets-ii/)  
-[Permutation]( https://leetcode.com/problems/permutations/)  
-[Permutations II]( https://leetcode.com/problems/permutations-ii/)  
-[Combination Sum]( https://leetcode.com/problems/combination-sum/)  
+ 
 
 
 

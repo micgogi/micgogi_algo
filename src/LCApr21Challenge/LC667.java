@@ -17,7 +17,7 @@ public class LC667 {
         int high = n;
         int low = 1;
         int i = 0;
-        result[i++] = low;
+        result[i++] = low++;
         boolean isHigh = false;
         while (k > 1) {
             result[i++] = high--;

@@ -1,5 +1,5 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/micgogi/micgogi_algo?style=plastic)
-[![Issues](https://img.shields.io/github/issues/afrozchakure/Competitive-Programming-Solutions)](https://github.com/afrozchakure/Competitive-Programming-Solutions/issues)
+[![Issues](https://img.shields.io/github/issues/micgogi/micgogi_algo)]
 [![Open PRs](https://img.shields.io/github/issues-pr-raw/micgogi/micgogi_algo)](https://github.com/micgogi/micgogi_algo/pulls)
 [![Last commit](https://badges.pufler.dev/updated/micgogi/micgogi_algo?color=red)](https://badges.pufler.dev)
 [![Stars](https://img.shields.io/github/stars/micgogi/micgogi_algo?color=green)](https://github.com/micgogi/micgogi_algo/stargazers)

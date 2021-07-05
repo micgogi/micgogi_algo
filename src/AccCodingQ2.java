@@ -36,9 +36,9 @@ public class AccCodingQ2 {
             newString.deleteCharAt(newString.length() - 1);
             return;
         }
-        if (newString.charAt(newString.length()-1)!=word.charAt(newString.length()-1)){
+        if (newString.charAt(newString.length() - 1) != word.charAt(newString.length() - 1)) {
             visited[i][j] = false;
-            newString.deleteCharAt(newString.length()-1);
+            newString.deleteCharAt(newString.length() - 1);
             return;
         }
         if (newString.length() > word.length()) {

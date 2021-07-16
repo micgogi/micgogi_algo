@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * Rahul Gogyani
  */
 public class LC611 {
-    public static void main(String args[]) {
+    static public  void main(String args[]) {
         System.out.println(triangleNumber(new int[]{2, 2, 3, 4}));
     }
 

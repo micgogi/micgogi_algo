@@ -1,14 +1,17 @@
 public class LC104 {
 
     static TreeNode root;
-    static class TreeNode{
+
+    static class TreeNode {
         int data;
         TreeNode left;
         TreeNode right;
-        public TreeNode(int data){
+
+        public TreeNode(int data) {
             this.data = data;
         }
     }
+
     public static void main(String[] args) {
         root = new TreeNode(4);
         root.left = new TreeNode(2);
@@ -20,9 +23,10 @@ public class LC104 {
     }
 
     public static int maxDepth(TreeNode root) {
-        if(root==null){
+        if (root == null) {
+
             return 0;
         }
-        return 1+Math.max(maxDepth(root.left),maxDepth(root.right));
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 }

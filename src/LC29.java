@@ -6,15 +6,15 @@
 public class LC29 {
     public int divide(long dividend, long divisor) {
 
-        long res =dividend/divisor;
+        long res = dividend / divisor;
 
-        if(res>Integer.MAX_VALUE){
+        if (res > Integer.MAX_VALUE) {
             return Integer.MAX_VALUE;
         }
-        if(res<Integer.MIN_VALUE){
+        if (res < Integer.MIN_VALUE) {
             return Integer.MIN_VALUE;
         }
-        return (int)res;
+        return (int) res;
 
     }
 }

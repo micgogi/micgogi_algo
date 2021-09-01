@@ -1,30 +1,38 @@
+
+/**
+ * @author Micgogi
+ * on 4/3/2021  12:33 PM
+ * Rahul Gogyani
+ */
 public class LC32 {
-    public int longestValidParentheses(String s) {
-        int n = s.length();
-        int ans[] = new int[n];
+    public static void main(String args[]) {
+        System.out.println(longestValidParentheses("()()"));
+    }
+
+    public static int longestValidParentheses(String s) {
+        int left = 0;
+        int right = 0;
         int max = 0;
-        for(int i=n-2;i>=0;i--){
-            if(s.charAt(i) == ')')
-                continue;
-            if(s.charAt(i+1) == ')'){
-                int x = 2;
-                if(i+2<n){
-                    x += ans[i+2];
-                }
-                ans[i] = x;
-                if(max<ans[i])
-                    max = ans[i];
+        for (char c : s.toCharArray()) {
+            if (c == '(') left++;
+            else if (c == ')') right++;
+            if (left == right) {
+                max = Math.max(max, 2 * right);
+            } else if (right >= left) {
+                left = 0;
+                right = 0;
             }
-            else{
-                int index = i + ans[i+1] + 1;
-                int x = 0;
-                if(index>=n || s.charAt(index) == '(')
-                    continue;
-                ans[i] = ans[i+1] + 2;
-                if(index+1<n)
-                    ans[i] += ans[index+1];
-                if(max<ans[i])
-                    max = ans[i];
+        }
+        left = 0;
+        right = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == '(') left++;
+            else if (s.charAt(i) == ')') right++;
+            if (left == right) {
+                max = Math.max(max, 2 * left);
+            } else if (left >= right) {
+                left = 0;
+                right = 0;
             }
         }
         return max;

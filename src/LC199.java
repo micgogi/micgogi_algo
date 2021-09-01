@@ -10,14 +10,17 @@ import java.util.Queue;
  */
 public class LC199 {
     static Node root;
-    static class Node{
+
+    static class Node {
         int data;
         Node left;
         Node right;
-        public Node(int data){
+
+        public Node(int data) {
             this.data = data;
         }
     }
+
     public static void main(String[] args) {
         root = new Node(1);
         root.left = new Node(2);
@@ -27,22 +30,22 @@ public class LC199 {
         System.out.println(rightSideView(root));
     }
 
-    public static List<Integer> rightSideView(Node root){
+    public static List<Integer> rightSideView(Node root) {
         List<Integer> list = new ArrayList<>();
         Queue<Node> queue = new LinkedList<>();
-        if(root==null) return null;
+        if (root == null) return null;
         queue.add(root);
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int size = queue.size();
-            for (int i = 0; i <size ; i++) {
+            for (int i = 0; i < size; i++) {
                 Node n = queue.poll();
-                if(i==size-1){
+                if (i == size - 1) {
                     list.add(n.data);
                 }
-                if(n.left!=null){
+                if (n.left != null) {
                     queue.add(n.left);
                 }
-                if(n.right!=null){
+                if (n.right != null) {
                     queue.add(n.right);
                 }
             }

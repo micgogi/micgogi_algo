@@ -28,45 +28,46 @@ public class LC99 {
         root.left.right = new Node(2);
         recoverTree(root);
     }
-    public static void recoverTree(Node root){
+
+    public static void recoverTree(Node root) {
         Node pre = null;
         Node first = null;
         Node second = null;
         Node current = root;
-        while (current!=null){
+        while (current != null) {
             //left is null then print the node and go to right node
-            if (current.left == null){
-                System.out.println(current.data+" ");
-                if(pre!=null&&pre.data>current.data){
-                    if(first==null){
+            if (current.left == null) {
+                System.out.println(current.data + " ");
+                if (pre != null && pre.data > current.data) {
+                    if (first == null) {
                         first = pre;
                         second = current;
-                    }else{
+                    } else {
                         second = current;
                     }
                 }
                 pre = current;
                 current = current.right;
-            }else{
+            } else {
                 //find the predecessor
                 Node predecessor = current.left;
                 //to find predecessor keep going right till right node is not null or current
-                while (predecessor.right!=current&&predecessor.right!=null){
+                while (predecessor.right != current && predecessor.right != null) {
                     predecessor = predecessor.right;
                 }
                 //if right node is null then go left after establishing link from predecessor to current
-                if(predecessor.right==null){
+                if (predecessor.right == null) {
                     predecessor.right = current;
                     current = current.left;
-                }else{
+                } else {
                     //left is already visited. go right after visiting current
                     predecessor.right = null;
-                    System.out.println(current.data+" ");
-                    if(pre!=null&&pre.data>current.data){
-                        if(first==null){
+                    System.out.println(current.data + " ");
+                    if (pre != null && pre.data > current.data) {
+                        if (first == null) {
                             first = pre;
                             second = current;
-                        }else{
+                        } else {
                             second = current;
                         }
                     }
@@ -78,12 +79,13 @@ public class LC99 {
         }
         System.out.println(first.data);
         System.out.println(second.data);
-        if(first!=null&&second!=null){
+        if (first != null && second != null) {
             int temp = first.data;
             first.data = second.data;
             second.data = temp;
         }
     }
+
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;

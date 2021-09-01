@@ -43,11 +43,11 @@ public class LC19 {
     }
     public static void main(String[] args) {
         root = new Node(1);
-//        root.next = new Node(2);
-//        root.next.next = new Node(3);
-//        root.next.next.next = new Node(4);
-//        root.next.next.next.next = new Node(5);
-//        removeNthElement(root,2);
+        root.next = new Node(2);
+        root.next.next = new Node(3);
+        root.next.next.next = new Node(4);
+        root.next.next.next.next = new Node(5);
+        removeNthElement(root,2);
 //        while (root!=null){
 //            System.out.println(root.data);
 //            root = root.next;

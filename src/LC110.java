@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+
 
 /**
  * @author Micgogi
@@ -10,14 +7,17 @@ import java.util.StringTokenizer;
  */
 public class LC110 {
     static TreeNode root;
-    static class TreeNode{
+
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        public TreeNode(int val){
+
+        public TreeNode(int val) {
             this.val = val;
         }
     }
+
     public static void main(String args[]) {
         root = new TreeNode(3);
         root.left = new TreeNode(9);
@@ -29,23 +29,23 @@ public class LC110 {
     }
 
     public static boolean isBalanced(TreeNode root) {
-        return height(root)!=-1;
+        return height(root) != -1;
     }
 
-    public static int height(TreeNode root){
-        if(root==null)return 0;
-       int left = height(root.left);
-       if(left==-1){
-           return -1;
-       }
-       int right = height(root.right);
-       if(right==-1){
-           return -1;
-       }
-       if(left-right<-1||left-right>1){
-           return -1;
-       }
-       return 1+Math.max(height(root.left),height(root.right));
+    public static int height(TreeNode root) {
+        if (root == null) return 0;
+        int left = height(root.left);
+        if (left == -1) {
+            return -1;
+        }
+        int right = height(root.right);
+        if (right == -1) {
+            return -1;
+        }
+        if (left - right < -1 || left - right > 1) {
+            return -1;
+        }
+        return 1 + Math.max(left, right);
 
 
     }

@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  */
 public class LCMissingPositiveInteger {
     public static void main(String args[]) {
-        System.out.println(missingPositiveInteger(new int[]{3, 4, -1, 1}));
+        System.out.println(missingPositiveInteger(new int[]{ -1, -3}));
     }
 
     public static int missingPositiveInteger(int[] a) {

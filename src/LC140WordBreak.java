@@ -11,14 +11,17 @@ import java.util.*;
  */
 public class LC140WordBreak {
     public static void main(String args[]) {
-        String s = "pineapplepenapple";
-        List<String> wordDict = Arrays.asList("apple", "pen", "applepen", "pine", "pineapple");
+        String s = "catsanddog";
+        List<String> wordDict = Arrays.asList("cat", "cats", "and", "sand", "dog");
         System.out.println(wordBreak(s,wordDict));
 
     }
 
     public static List<String> wordBreak(String s, List<String> wordDict) {
-        return helper(s,wordDict,new HashMap<>());
+        HashMap<String,List<String>> dp = new HashMap<>();
+        List<String> an = helper(s,wordDict,dp);
+        System.out.println(dp);
+        return an;
 
     }
     public static List<String> helper(String s, List<String> wordDict, HashMap<String,List<String>> dp){

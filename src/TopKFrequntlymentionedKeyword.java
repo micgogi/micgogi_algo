@@ -1,10 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author Micgogi
@@ -13,6 +11,11 @@ import java.util.StringTokenizer;
  */
 public class TopKFrequntlymentionedKeyword {
     public static void main(String args[]) {
+
+        Integer[] arr = {1,2,3,4,5,6,7,8,9,10};
+      List<Integer>  list= Arrays.stream(arr).map(i->i*2).collect(Collectors.toList());
+        System.out.println(list);
+
         System.out.println(popularNFeatures(6,2, Arrays.asList("storage","battery",
                 "hover","alexa","waterproof","solar"),7,Arrays.asList("I wish my kindle had even more storage",
                         "I wish the battery life on my kindle lasted 2 years",

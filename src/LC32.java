@@ -1,5 +1,4 @@
 
-
 /**
  * @author Micgogi
  * on 4/3/2021  12:33 PM
@@ -39,4 +38,3 @@ public class LC32 {
         return max;
     }
 }
-
